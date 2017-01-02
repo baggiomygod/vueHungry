@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>position fixed absolute static relative</title>
+</head>
+<style type="text/css">
+	div{
+		border: 1px solid #000;
+	}
+	.p-fixed{
+		/*现对于浏览器窗口*/
+
+		position:fixed; 
+		top: 10px;
+		left: 10px;
+		width: 300px;
+		height: 300px;
+	}
+	.p-relative{
+		/*相对于其正常位置进行定位*/
+		position: relative;
+		top: 20px;
+		left: 20px;
+		width: 200px;
+		height: 200px;
+	}
+	.p-static{
+	/*元素出现在正常的流中 忽略 top bottom left  right  z-index*/
+		position :static;
+		width: 100px;
+		height: 100px;
+	}
+	.test{
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		width: 50px;
+		height:50px;
+	}
+
+</style>
+<body>
+<div class="p-fixed">
+fixed
+	<div class="p-relative">
+	relative
+		<div class="p-static">
+		static
+			<div class="test">test</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<template>
+    <div>
+        <v-header v-bind:seller="seller"></v-header>
+        <div class="tab border-1px">
+            <div class="tab-item">
+                <a v-link="{path:'/goods'}">商品</a>
+            </div>
+            <div class="tab-item">
+                <a v-link="{path:'/ratings'}">评论</a>
+            </div>
+            <div class="tab-item">
+                <a v-link="{path:'/seller'}">商家</a>
+            </div>
+        </div>
+        <!-- 路由外链 :seller="seller"向goods组件传seller数据对象 -->
+        <router-view keep-alive v-bind:seller="seller"></router-view>
+    </div>
+</template>
+<script>
+import header from 'components/header/header.vue';
+import goods from 'components/goods/goods.vue';
+
+const ERR_OK = 0;
+export default {
+    data() {
+            return {
+                seller: {}
+            };
+        },
+        created() {
+            this.$http.get('/api/seller').then((response) => {
+                response = response.body;
+                if (response.errno === ERR_OK) {
+                    this.seller = response.data;
+                }
+            });
+        },
+        components: {
+            'v-header': header,
+            'v-goods': goods
+        }
+};
+</script>
+<style lang="scss" rel="stylesheet/scss">
+@import "common/style/mixin";
+.tab {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    @include border-1px(rgba(7, 17, 27, 0.1));
+    .tab-item {
+        flex: 1;
+        text-align: center;
+        a {
+            display: block;
+            font-size: 14px;
+            color: rgb(77, 85, 93);
+        }
+        a.active {
+            color: rgb(240, 20, 20);
+        }
+    }
+}
+</style>
