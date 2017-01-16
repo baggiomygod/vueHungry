@@ -1,0 +1,12 @@
+Revert "Update README.md"
+
+This reverts commit 650557522050c92e17ec768f1934c365c54963df.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#
