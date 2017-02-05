@@ -5,7 +5,7 @@
                 <div class="mark-wrapper">
                     <div class="mark">{{seller.score}}</div>
                     <h1 class="title">综合评分</h1>
-                    <div class="other-mark">高于周边商家{{seller.rankRate}}%</div>
+                    <div class="other-mark">高于同行{{seller.rankRate}}%</div>
                 </div>
                 <div class="stars">
                     <div class="stars-item">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="stars-item">
                         <span class="star-title">送达时间</span>
-                        <span class="arrive-time">44分钟</span>
+                        <span class="arrive-time">24小时</span>
                     </div>
                 </div>
             </div>

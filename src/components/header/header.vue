@@ -9,7 +9,7 @@
                     <span class="brand"></span>
                     <span class="name">{{seller.name}}</span>
                 </div>
-                <div class="description">{{seller.description}}/{{seller.deliveryTime}}分钟送达</div>
+                <div class="description">{{seller.description}}</div>
                 <!-- v-if判断:数据是异步加载的，当数据还未加载是，seller={},supports为undefined，此时v-if判断后显示空 -->
                 <div class="support" v-if="seller.supports">
                     <span class="icon" v-bind:class="classMap[seller.supports[0].type]"></span>
@@ -48,7 +48,7 @@
                     </ul>
                     <div class="detail-title">
                         <div class="line"></div>
-                        <div class="text">商家公告</div>
+                        <div class="text">关于我们</div>
                         <div class="line"></div>
                     </div>
                     <div class="detail-text">

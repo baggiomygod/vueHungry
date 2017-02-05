@@ -12,23 +12,23 @@
                 </div>
                 <div class="price-time">
                     <div class="price min-price">
-                        <div class="top-text">起送价</div>
+                        <div class="top-text">满</div>
                         <div class="bottom-text">
-                            {{seller.minPrice}}
-                            <span class="min-text">元</span>
+                            {{seller.freePostage}}
+                            <span class="min-text">包邮</span>
                         </div>
                     </div>
                     <div class="price delivery-price">
-                        <div class="top-text">商家配送</div>
+                        <div class="top-text">送</div>
                         <div class="bottom-text">
-                            {{seller.deliveryPrice}}
-                            <span class="min-text">元</span>
+                            {{seller.telephoneCharge}}
+                            <span class="min-text">话费</span>
                         </div>
                     </div>
                     <div class="price delivery-time">
-                        <div class="top-text">平均配送时间</div>
+                        <div class="top-text">送达</div>
                         <div class="bottom-text">
-                            {{seller.deliveryTime}}<span class="min-text">分钟</span>
+                            {{seller.deliveryTime}}<span class="min-text">小时</span>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                 <h1 class="title">商家实景</h1>
                 <div class="pic-wrapper" v-el:pic-wrapper>
                     <ul class="pic-list" v-el:pic-list>
-                        <li class="pic-item" v-for="pic in seller.pics">
+                        <li class="pic-item" v-for="pic in seller.pics" track-by="$index">
                             <img width="120" height="90" :src="pic">
                         </li>
                     </ul>

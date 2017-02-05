@@ -7,7 +7,7 @@
                     <div class="total-count" v-show="totalCount>0">{{totalCount}}</div>
                 </div>
                 <div class="price" v-bind:class="{'high-light':totalPrice>0}">{{totalPrice}}元</div>
-                <div class="desc">另需配送费{{deliveryPrice}}元</div>
+                <div class="desc">另需邮费费{{deliveryPrice}}元</div>
             </div>
             <!-- v-on:click.stop.prevent：阻止冒泡，组织默认时间 -->
             <div class="content-right" v-on:click.stop.prevent="payForFoods" v-bind:class="[totalPrice>minPrice?'enough':'not-enough']">{{payDesc}}</div>
