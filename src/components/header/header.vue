@@ -98,7 +98,7 @@ export default {
 .header {
     position: relative;
     color: #fff;
-    background-color: rgba(7, 17, 27, 0.5);
+    background-color: rgba(7, 17, 27, 0.2);
     overflow: hidden;
     .content-wrapper {
         position: relative;
