@@ -1,46 +1,62 @@
 <template>
-    <div class="shopcar">
-        <div class="content"  v-on:click="toggleList">
-            <div class="content-left">
-                <div class="logo-wrapper">
-                    <div class="logo" v-bind:class="{'high-light':totalCount>0}"><i class="icon-shopping_cart" v-bind:class="{'high-light':totalCount>0}"></i></div>
-                    <div class="total-count" v-show="totalCount>0">{{totalCount}}</div>
-                </div>
-                <div class="price" v-bind:class="{'high-light':totalPrice>0}">{{totalPrice}}元</div>
-                <div class="desc">另需邮费费{{deliveryPrice}}元</div>
-            </div>
-            <!-- v-on:click.stop.prevent：阻止冒泡，组织默认时间 -->
-            <div class="content-right" v-on:click.stop.prevent="payForFoods" v-bind:class="[totalPrice>minPrice?'enough':'not-enough']">{{payDesc}}</div>
-        </div>
-        <div class="ball-container">
-            <div class="ball" v-for="ball in balls" v-show="ball.show" transition="drop">
-                <div class="inner inner-hook"></div>
-            </div>
-        </div>
-        <div class="shopcar-list" v-show="listShow" transition="fold">
-            <div class="list-header">
-                <div class="title">购物车</div>
-                <div class="empty clearfix" v-on:click="clearCar">清空</div>
-            </div>
-            <div class="list-content" v-el:list-content>
-                <ul>
-                    <li class="food" v-for="food in selectFoods">
-                        <span class="name">{{food.name}}</span>
-                        <div class="price">￥<span class="text">{{food.price*food.count}}</span>
-                            <div class="control-wrapper">
-                                <cartcontrol v-bind:food="food"></cartcontrol>
-                            </div>
+    <div>
+        <div class="shopcar">
+            <div class="content" @click="toggleList">
+                <div class="content-left">
+                    <div class="logo-wrapper">
+                        <div class="logo" :class="{'high-light':totalCount>0}">
+                            <i class="icon-shopping_cart" :class="{'high-light':totalCount>0}"></i>
                         </div>
-                    </li>
-                </ul>
+                        <div class="total-count" v-show="totalCount>0">{{totalCount}}</div>
+                    </div>
+                    <div class="price" :class="{'high-light':totalPrice>0}">{{totalPrice}}元</div>
+                    <div class="desc">另需邮费费{{deliveryPrice}}元</div>
+                </div>
+                <div class="content-right" @click.stop.prevent="payForFoods" :class="[totalPrice>minPrice?'enough':'not-enough']">
+                    {{payDesc}}</div>
             </div>
+            <div class="ball-container">
+                <div v-for="(ball,$index) in balls" :key="$index">
+                    <transition name="drop" 
+                                @before-enter="beforeDrop" 
+                                @enter="dropping" 
+                                @after-enter="afterDrop">
+                        <div class="ball" v-show="ball.show">
+                            <div class="inner inner-hook"></div>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+            <transition name="fold">
+                <div class="shopcar-list" v-show="listShow">
+                    <div class="list-header">
+                        <h1 class="title">购物车</h1>
+                        <span class="empty clearfix" @click="clearCar">清空</span>
+                    </div>
+                    <div class="list-content" ref="listContent">
+                        <ul>
+                            <li class="food" v-for="food in selectFoods" :key="food.count">
+                                <span class="name">{{food.name}}</span>
+                                <div class="price">
+                                    <span class="text">￥{{food.price*food.count}}</span>
+                                </div>
+                                <div class="control-wrapper">
+                                    <cartcontrol @add="addFood" :food="food"></cartcontrol>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </transition>
         </div>
+        <transition name="fade">
+            <div class="list-mask" v-show="listShow" @click="this.fold = !fold"></div>
+        </transition>
     </div>
-    <div class="list-mask" v-show="listShow" transition="fade" v-on:click="this.fold = !fold"></div>
 </template>
-<script type="text/javascript">
-import cartcontrol from 'components/cartcontrol/cartcontrol';
+ <script type="text/javascript">
 import BScroll from 'better-scroll';
+import cartcontrol from 'components/cartcontrol/cartcontrol';
 export default {
     props: {
         deliveryPrice: {
@@ -53,7 +69,7 @@ export default {
         },
         selectFoods: {
             type: Array,
-            default () { // type为数组或对象，default为函数
+            default() { // type为数组或对象，default为函数
                 return [];
             }
         }
@@ -74,6 +90,9 @@ export default {
             dropBalls: [],
             fold: true
         };
+    },
+    components: {
+        cartcontrol
     },
     // 计算属性
     computed: {
@@ -104,15 +123,15 @@ export default {
             }
         },
         listShow() {
-            if (!this.totalCount) {
+            if (!this.totalCount) { // 0个时 不显示
                 this.fold = true;
                 return false;
             }
-            let show = !this.fold; // 折叠时 show=false,flod---折叠的意思
+            let show = !this.fold; // 折叠时 show=false,flod---折叠
             if (show) {
                 this.$nextTick(() => {
                     if (!this.scroll) {
-                        this.scroll = new BScroll(this.$els.listContent, {
+                        this.scroll = new BScroll(this.$refs.listContent, {
                             click: true
                         });
                     } else {
@@ -124,9 +143,11 @@ export default {
         }
     },
     methods: {
+        addFood(target) {
+            this.drop(target);
+        },
         // 遍历小球，如果为隐藏，显示，并赋值给dropballs
         drop(el) {
-            console.log(this.balls);
             for (let i = 0; i < this.balls.length; i++) {
                 let ball = this.balls[i];
                 if (!ball.show) {
@@ -155,49 +176,46 @@ export default {
                 return;
             }
             window.alert('支付：' + this.totalCount);
-        }
-    },
-    transitions: {
-        drop: {
-            beforeEnter(el) {
-                let count = this.balls.length;
-                while (count--) {
-                    let ball = this.balls[count];
-                    if (ball.show) {
-                        let rect = ball.el.getBoundingClientRect(); // 获取el的位置
-                        let x = rect.left - 32; // 加号相对购物车logo的X轴偏移
-                        let y = -(window.innerHeight - rect.top - 30); // 加号相对购物车logo的Y轴偏移
-                        el.style.display = '';
-                        el.style.webkitTransform = `translate3d(0,${y}px,0)`; // 外层元素做纵向动画
-                        el.style.transform = `translate3d(0,${y}px,0)`;
-                        let inner = el.getElementsByClassName('inner-hook')[0];
-                        inner.style.webkitTransform = `translate3d(${x}px,0,0)`;
-                        inner.style.transform = `translate3d(${x}px,0,0)`;
-                    }
-                }
-            },
-            enter(el) {
-                /* eslint-disable no-unused-vars */
-                let rf = el.offsetHeight; // 重绘
-                this.$nextTick(() => {
-                    el.style.webkitTransform = 'translate3D(0,0,0)'; // 外层元素做纵向动画
-                    el.style.transform = 'translate3D(0,0,0)';
+        },
+        beforeDrop(el) {
+            console.log('bofore drop el:', el);
+            let count = this.balls.length;
+            while (count--) {
+                let ball = this.balls[count];
+                if (ball.show) {
+                    let rect = ball.el.getBoundingClientRect(); // 获取el的位置
+                    let x = rect.left - 32; // 加号相对购物车logo的X轴偏移
+                    let y = -(window.innerHeight - rect.top - 30); // 加号相对购物车logo的Y轴偏移
+                    el.style.display = '';
+                    el.style.webkitTransform = `translate3d(0,${y}px,0)`; // 外层元素做纵向动画
+                    el.style.transform = `translate3d(0,${y}px,0)`;
                     let inner = el.getElementsByClassName('inner-hook')[0];
-                    inner.style.webkitTransform = 'translate3D(0,0,0)';
-                    inner.style.transform = 'translate3D(0,0,0)';
-                });
-            },
-            afterEnter(el) {
-                let ball = this.dropBalls.shift(); // 把数组中第一个元素删除，并返回第一个元素的值
-                if (ball) {
-                    ball.show = false;
-                    el.style.display = 'none';
+                    inner.style.webkitTransform = `translate3d(${x}px,0,0)`;
+                    inner.style.transform = `translate3d(${x}px,0,0)`;
                 }
             }
+        },
+        dropping(el, done) {
+            console.log('dropping el:', el);
+            /* eslint-disable no-unused-vars */
+            let rf = el.offsetHeight; // 重绘
+            this.$nextTick(() => {
+                el.style.webkitTransform = 'translate3d(0,0,0)'; // 外层元素做纵向动画
+                el.style.transform = 'translate3d(0,0,0)';
+                let inner = el.getElementsByClassName('inner-hook')[0];
+                inner.style.webkitTransform = 'translate3d(0,0,0)';
+                inner.style.transform = 'translate3d(0,0,0)';
+                el.addEventListener('transitionend', done);
+            });
+        },
+        afterDrop(el) {
+            console.log('afterDrop el:', el);
+            let ball = this.dropBalls.shift(); // 把数组中第一个元素删除，并返回第一个元素的值
+            if (ball) {
+                ball.show = false;
+                el.style.display = 'none';
+            }
         }
-    },
-    components: {
-        cartcontrol
     }
 };
 </script>
@@ -208,8 +226,7 @@ export default {
     bottom: 0;
     z-index: 50;
     width: 100%;
-    height: 48px;
-    // background-color: #000;
+    height: 48px; // background-color: #000;
     .content {
         display: flex;
         background-color: #141d27;
@@ -313,9 +330,7 @@ export default {
             left: 32px;
             bottom: 22px;
             z-index: 200;
-            &.drop-transition {
-                transition: all .4s cubic-bezier(.47, -0.05, .84, .41);
-            }
+            transition: all .4s cubic-bezier(.47, -0.05, .84, .41);
             .inner {
                 width: 16px;
                 height: 16px;
@@ -332,14 +347,18 @@ export default {
         z-index: -1;
         width: 100%;
         background-color: #fff;
-        &.fold-transition {
-            transition: all .4s linear;
-            transform: translate3d(0, -100%, 0);
-        }
-        &.fold-enter,
-        &.fold-leave {
+        transition: all .4s linear;
+        transform: translate3d(0, -100%, 0); // &.fold-enter-active,
+        // &.fold-leave-active {
+        //     transition: all .4s;
+        // }
+        &.fold-enter, // 为什么是fold-enter 不是fold-enter-active
+        &.fold-leave-active {
             transform: translate3d(0, 0, 0);
         }
+
+
+
         .list-header {
             height: 40px;
             background-color: #f3f5f7;
@@ -366,6 +385,7 @@ export default {
             overflow: hidden;
             background: #fff;
             .food {
+                display: flex;
                 position: relative;
                 height: 48px;
                 font-size: 0px;
@@ -376,23 +396,27 @@ export default {
                     line-height: 36px;
                 }
                 .price {
-                    display: inline-block;
+                    // display: inline-block;
+                    flex-grow: 1;
                     font-size: 10px;
                     color: rgb(240, 20, 20);
                     line-height: 36px;
                     margin-left: 16px;
                     float: right;
+                    display: flex;
+                    justify-content: flex-end;
                     .text {
                         font-size: 14px;
-                        line-height: 24px;
+                        line-height: 36px;
                         font-weight: 700;
-                    }
-                    .control-wrapper {
-                        margin-left: 12px;
-                        display: inline-block;
-                        float: right;
+
                     }
                 }
+                .control-wrapper {
+                        // position: absolute;
+                        right: 0;
+                        bottom: 6px;
+                    }
             }
         }
     }
@@ -406,13 +430,14 @@ export default {
     height: 100%;
     z-index: 40;
     backdrop-filter: blur(10px);
-    &.fade-transition {
-        opacity: 1;
-        background-color: rgba(7, 17, 27, 0.6);
-        transition: all .4s;
+    opacity: 1;
+    background-color: rgba(7, 17, 27, 0.6); // transition: all .4s;
+    &.fade-enter-active,
+    &.fade-leave-active {
+        transition: all .5s;
     }
     &.fade-enter,
-    &.fade-leave {
+    &.fade-leave-active {
         opacity: 0;
         background-color: rgba(7, 17, 27, 0);
     }

@@ -1,10 +1,12 @@
-。<template>
+<template>
     <div class="cartcontrol">
-        <div class="cart-decrease" v-show="food.count>0" v-on:click.stop.prevent="decreaseCart($event)" transition="move">
-            <span class="inner icon-remove_circle_outline"></span>
-        </div>
+        <transition name="move">
+            <div class="cart-decrease" v-show="food.count>0" @click.stop.prevent="decreaseCart">
+                <span class="inner icon-remove_circle_outline"></span>
+            </div>
+        </transition>
         <div class="count" v-show="food.count>0">{{food.count}}</div>
-        <div class="cart-add icon-add_circle" v-on:click.stop.prevent="addCart($event)"></div>
+        <div class="cart-add icon-add_circle" @click.stop.prevent="addCart"></div>
     </div>
 </template>
 <script type="text/javascript">
@@ -27,8 +29,7 @@ export default {
             } else {
                 this.food.count++;
             }
-            // 向父层组件传递事件'cart.add',事件的元素，e.target
-            this.$dispatch('cart.add', e.target); // (组件间传递事件，dispatch向上冒泡)派发事件，首先在实例上触发它，然后沿着父链向上冒泡在触发一个监听器后停止，除非它返回 true。
+            this.$emit('add', e.target);
         },
         decreaseCart(e) {
             if (!e._constructed) {
@@ -42,28 +43,32 @@ export default {
 <style lang="scss" rel="stylesheet/scss">
 .cartcontrol {
     font-size: 0;
-    height: 36px;
+    height: 36px; // 减图标滚动出现和隐藏---
     .cart-decrease {
         display: inline-block;
         padding: 6px;
-        transition: all 0.4s linear;
-        &.move-transition {
-            opacity: 1;
-            transform: translate3D(0, 0, 0);
-            .inner {
-                display: inline-block;
-                font-size: 24px;
-                color: rgb(0, 160, 220);
-                line-height: 24px;
-                transition: all 0.4s linear;
-                transform: rotate(0);
-            }
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        .inner {
+            display: inline-block;
+            line-height: 24px;
+            font-size: 24px;
+            color: rgb(0, 160, 220);
+            transition: all .4s linear;
+            transform: rotate(0);
         }
-        &.move-enter,
-        &.move-leave {
+        &.move-enter-active, // 进入过渡 时间和曲线
+        &.move-leave-active {
+            // 离开过渡 时间和曲线
+            transition: all .4s linear;
+        }
+        &.move-enter, // （进入时：opacity,位置在加号那 一瞬间）
+        &.move-leave-active {
+            // （离开时：有1变为0，向右偏移24）
             opacity: 0;
-            transform: translate3D(24px, 0, 0);
+            transform: translate3d(24px, 0, 0);
             .inner {
+                // 减号旋转180度
                 transform: rotate(180deg);
             }
         }
@@ -77,8 +82,7 @@ export default {
         padding: 6px 0 0 0;
         text-align: center;
         vertical-align: top; // 为什么是top
-        line-height: 24px;
-        // margin: 6px 0;
+        line-height: 24px; // margin: 6px 0;
     }
     .cart-add {
         display: inline-block;

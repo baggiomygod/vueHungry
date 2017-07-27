@@ -1,19 +1,20 @@
 <template>
     <div>
-        <v-header v-bind:seller="seller"></v-header>
+        <v-header :seller="seller"></v-header>
         <div class="tab border-1px">
             <div class="tab-item">
-                <a v-link="{path:'/goods'}">商品</a>
+                <router-link to="/goods">商品</router-link>
             </div>
             <div class="tab-item">
-                <a v-link="{path:'/ratings'}">评论</a>
+                <router-link to="/ratings">评论</router-link>
             </div>
             <div class="tab-item">
-                <a v-link="{path:'/seller'}">商家</a>
+                <router-link to="/seller">商家</router-link>
             </div>
         </div>
-        <!-- 路由外链 :seller="seller"向goods组件传seller数据对象 -->
-        <router-view keep-alive v-bind:seller="seller"></router-view>
+        <keep-alive>
+            <router-view :seller="seller"></router-view>
+        </keep-alive>
     </div>
 </template>
 <script>
@@ -23,22 +24,22 @@ import goods from 'components/goods/goods.vue';
 const ERR_OK = 0;
 export default {
     data() {
-            return {
-                seller: {}
-            };
-        },
-        created() {
-            this.$http.get('/api/seller').then((response) => {
-                response = response.body;
-                if (response.errno === ERR_OK) {
-                    this.seller = response.data;
-                }
-            });
-        },
-        components: {
-            'v-header': header,
-            'v-goods': goods
-        }
+        return {
+            seller: {}
+        };
+    },
+    created() {
+        this.$http.get('/api/seller').then((response) => {
+            response = response.body;
+            if (response.errno === ERR_OK) {
+                this.seller = response.data;
+            }
+        });
+    },
+    components: {
+        'v-header': header,
+        'v-goods': goods
+    }
 };
 </script>
 <style lang="scss" rel="stylesheet/scss">

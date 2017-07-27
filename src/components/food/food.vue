@@ -1,5 +1,6 @@
 <template>
-    <div class="food" v-show="showFlag" transition="flayfromright" v-el:food>
+    <transition name="flayfromright">
+    <div class="food" v-show="showFlag" ref="food">
         <div class="food-content">
             <div class="img-header">
                 <img v-bind:src="food.image">
@@ -17,9 +18,11 @@
                     <span class="now">￥<span class="now-price">{{food.price}}</span></span>
                     <span class="old">￥<span class="old-price">{{food.oldPrice}}</span></span>
                 </div>
-                <div class="add-cart" v-show="!food.count" v-on:click="addCount($event)" transition="fade">
-                    加入购物车
-                </div>
+                <transition name="fade">
+                    <div class="add-cart" v-show="!food.count" @click="addCount($event)">
+                        加入购物车
+                    </div>
+                </transition>
                 <div v-show="food.count>0" class="add">
                     <cartcontrol v-bind:food="food"></cartcontrol>
                 </div>
@@ -30,26 +33,29 @@
                 <p class="text">{{food.info}}</p>
             </div>
             <split></split>
-            <rating-select :ratings="food.ratings" :select-type="selectType" :only-content="onlyContent" :desc="desc"></rating-select>
+            <rating-select @select="ratingTypeSelect" @toggle="showOnlyContent" :ratings="food.ratings" :select-type="selectType" :only-content="onlyContent" :desc="desc"></rating-select>
             <div class="rating-content">
                 <ul v-show="food.ratings && food.ratings.length" class="rating-list">
-                    <li v-for="rating in food.ratings" class="rating-item" v-show="needShow(rating.rateType,rating.text)" transition="fade">
-                        <div class="user">
-                            <span class="text time">{{rating.rateTime | formatDate}}</span>
-                            <span class="text user-account">{{rating.username}}
-                            <img class="user-avatar" width="12" height="12" :src="rating.avatar" />
-                            </span>
-                        </div>
-                        <div class="rating-text">
-                            <i class="icon" :class="[rating.rateType===0?'icon-thumb_up blue':'icon-thumb_down green']"></i>
-                            <span v-if="rating.text" class="text">{{rating.text}}</span>
-                            <span v-else class="text">暂无评价</span>
-                        </div>
-                    </li>
+                    <!-- <transition name="fade"> -->
+                        <li v-for="rating in food.ratings" :key="rating.text" class="rating-item" v-show="needShow(rating.rateType,rating.text)">
+                            <div class="user">
+                                <span class="text time">{{rating.rateTime | formatDate}}</span>
+                                <span class="text user-account">{{rating.username}}
+                                <img class="user-avatar" width="12" height="12" :src="rating.avatar" />
+                                </span>
+                            </div>
+                            <div class="rating-text">
+                                <i class="icon" :class="[rating.rateType===0?'icon-thumb_up blue':'icon-thumb_down green']"></i>
+                                <span v-if="rating.text" class="text">{{rating.text}}</span>
+                                <span v-else class="text">暂无评价</span>
+                            </div>
+                        </li>
+                    <!-- </transition> -->
                 </ul>
             </div>
         </div>
     </div>
+    </transition>
 </template>
 <script type="text/javascript">
 import {
@@ -84,7 +90,7 @@ export default {
             this.showFlag = true;
             this.$nextTick(() => {
                 if (!this.scroll) {
-                    this.scroll = new BScroll(this.$els.food, {
+                    this.scroll = new BScroll(this.$refs.food, {
                         click: true
                     });
                 } else {
@@ -99,7 +105,7 @@ export default {
             if (!e._constructed) {
                 return;
             }
-            this.$dispatch('cart.add', e.target);
+            this.$emit('add', e.target);
             Vue.set(this.food, 'count', 1);
         },
         needShow(type, text) {
@@ -112,6 +118,18 @@ export default {
             } else {
                 return type === this.selectType;
             }
+        },
+        ratingTypeSelect (type) {
+            this.selectType = type;
+            this.$nextTick(() => {
+                this.scroll.refresh;
+            });
+        },
+        showOnlyContent (onlyContent) {
+            this.onlyContent = onlyContent;
+            this.$nextTick(() => {
+                this.scroll.refresh;
+            });
         }
     },
     components: {
@@ -154,12 +172,14 @@ export default {
     z-index: 30;
     width: 100%;
     background-color: #fff;
-    &.flayfromright-transition {
+    // transition: all .3s linear;
+    transform: translate3d(0, 0, 0);
+    &.flayfromright-enter-active,
+    &.flayfromright-leave-active{
         transition: all .3s linear;
-        transform: translate3d(0, 0, 0);
     }
     &.flayfromright-enter,
-    &.flayfromright-leave {
+    &.flayfromright-leave-active {
         transform: translate3d(100%, 0, 0)
     }
     .food-content {
@@ -184,7 +204,7 @@ export default {
                     height: 20px;
                     width: 20px;
                     padding: 10px;
-                    color: #fff;
+                    color: #000;
                     font-size: 20px;
                 }
             }
@@ -247,12 +267,10 @@ export default {
                 color: #fff;
                 text-align: center;
                 line-height: 24px;
-                &.fade-transition {
-                    opacity: 1;
-                    transition: all .2s;
-                }
+                opacity: 1;
+                transition: all .2s;
                 &.fade-enter,
-                &.fade-leave {
+                &.fade-leave-active {
                     opacity: 0;
                 }
             }
@@ -288,12 +306,10 @@ export default {
                 .rating-item {
                     border-bottom: 1px solid rgba(7, 17, 27, 0.1);
                     padding: 16px;
-                    &.fade-transition {
-                        opacity: 1;
-                        transition: all .2s;
-                    }
+                    opacity: 1;
+                    transition: all .2s;
                     &.fade-enter,
-                    &.fade-leave {
+                    &.fade-leave-active {
                         opacity: 0;
                     }
                     .user {

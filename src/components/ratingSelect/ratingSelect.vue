@@ -68,15 +68,13 @@ export default {
             if (!e._constructed) {
                 return;
             }
-            this.selectType = type;
-            this.$dispatch('ratingType.select', this.selectType); // 向父级传递事件
+            this.$emit('select', type); // 向父级传递事件
         },
         toggleContent(e) {
             if (!e._constructed) {
                 return;
             }
-            this.onlyContent = !this.onlyContent;
-            this.$dispatch('content.toggle', this.onlyContent);
+            this.$emit('toggle', !this.onlyContent);
         }
     }
 };

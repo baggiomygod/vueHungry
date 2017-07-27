@@ -1,5 +1,5 @@
 <template>
-    <div class="seller" v-el:seller>
+    <div class="seller" ref="seller">
         <div class="seller-content">
             <div class="seller-brief">
                 <h1 class="title">{{seller.name}}</h1>
@@ -28,7 +28,8 @@
                     <div class="price delivery-time">
                         <div class="top-text">送达</div>
                         <div class="bottom-text">
-                            {{seller.deliveryTime}}<span class="min-text">小时</span>
+                            {{seller.deliveryTime}}
+                            <span class="min-text">小时</span>
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@
                 </div>
                 <div class="supports">
                     <ul class="supports-list">
-                        <li v-for="support in seller.supports" class="suppout-item">
+                        <li v-for="support in seller.supports" :key="support.type" class="suppout-item">
                             <span class="icon" :class="classMap[support.type]"></span>
                             <span class="text">{{support.description}}</span>
                         </li>
@@ -55,9 +56,9 @@
             <split></split>
             <div class="seller-pics">
                 <h1 class="title">商家实景</h1>
-                <div class="pic-wrapper" v-el:pic-wrapper>
-                    <ul class="pic-list" v-el:pic-list>
-                        <li class="pic-item" v-for="pic in seller.pics" track-by="$index">
+                <div class="pic-wrapper" ref="picWrapper">
+                    <ul class="pic-list" ref="picList">
+                        <li class="pic-item" v-for="(pic,$index) in seller.pics" :key="$index" track-by="$index">
                             <img width="120" height="90" :src="pic">
                         </li>
                     </ul>
@@ -67,7 +68,7 @@
             <div class="seller-info">
                 <h1 class="title">商家信息</h1>
                 <ul class="infos">
-                    <li class="info-item" v-for="info in seller.infos">
+                    <li class="info-item" v-for="info in seller.infos" :key="info">
                         {{info}}
                     </li>
                 </ul>
@@ -100,14 +101,16 @@ export default {
         this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
     },
     watch: {
-        'seller' () {
+        'seller'() {
             this._initScroll();
             this._initPics();
         }
     },
-    ready() {
+    mounted() {
+      this.$nextTick(() => {
         this._initScroll();
         this._initPics();
+      });
     },
     methods: {
         toggleFavorite(e) {
@@ -123,8 +126,7 @@ export default {
         },
         _initScroll() {
             if (!this.scroll) {
-                console.log(this.$els.seller);
-                this.scroll = new BScroll(this.$els.seller, {
+                this.scroll = new BScroll(this.$refs.seller, {
                     click: true
                 });
             } else {
@@ -136,10 +138,10 @@ export default {
                 let picWidth = 120;
                 let margin = 6;
                 let width = (picWidth + margin) * this.seller.pics.length - margin;
-                this.$els.picList.style.width = width + 'px';
+                this.$refs.picList.style.width = width + 'px';
                 this.$nextTick(() => {
-                        if (!this.picScroll) {
-                        this.picScroll = new BScroll(this.$els.picWrapper, {
+                    if (!this.picScroll) {
+                        this.picScroll = new BScroll(this.$refs.picWrapper, {
                             scrollX: true,
                             eventPassthrough: 'vertical'
                         });
@@ -160,6 +162,7 @@ export default {
     top: 180px;
     left: 0;
     bottom: 0;
+    width: 100%;
     overflow: hidden;
     .title {
         font-size: 14px;

@@ -28,7 +28,8 @@
         <div class="background">
             <img v-bind:src="seller.avatar" alt="" width="100%" height="100%">
         </div>
-        <div class="detail" v-show="detailShow" transition="fade">
+        <transition name="fade">
+        <div class="detail" v-show="detailShow">
             <div class="detail-wrapper clearfix">
                 <div class="detail-main">
                     <h1 class="name">{{seller.name}}</h1>
@@ -41,7 +42,7 @@
                         <div class="line"></div>
                     </div>
                     <ul v-if="seller.supports" class="detail-info">
-                        <li v-for="support in seller.supports">
+                        <li v-for="support in seller.supports" :key="support.type">
                             <span class="icon" v-bind:class="classMap[support.type]"></span>
                             <span class="text">{{support.description}}</span>
                         </li>
@@ -60,6 +61,7 @@
                 <i class="icon-close" ></i>
             </div>
         </div>
+        </transition>
     </div>
 </template>
 <script>
@@ -251,15 +253,14 @@ export default {
         overflow: auto;
         z-index: 100;
         filter: blur(0px);
-        transition:all 0.5s;
-        backdrop-filter:blur(10px);// IOS
-        &.fade-transition{
-            opacity: 1;
-            background-color: rgba(7, 17, 27, 0.8);
-        }
-        &.fade-enter,
-        &.fade-leave{
-            opacity: 0;
+        transition: all 0.5s; // 过渡时间
+        backdrop-filter: blur(10px);// IOS
+        opacity: 1; // 元素展现时的样式
+        background-color: rgba(7, 17, 27, 0.8);
+        // 过渡进入和离开时的样式
+        &.fade-enter-active,
+        &.fade-leave-active{
+            opacity:0;
             background-color: rgba(7, 17, 27, 0);
         }
         .detail-wrapper {

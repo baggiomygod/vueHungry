@@ -1,5 +1,5 @@
 <template>
-    <div class="ratings" v-el:ratings>
+    <div class="ratings" ref="ratings">
         <div class="ratings-view-wrapper">
             <div class="rating-view">
                 <div class="mark-wrapper">
@@ -29,23 +29,23 @@
                 </div>
             </div>
             <split></split>
-            <rating-select :ratings="ratings" :select-type="selectType" :only-content="onlyContent" :desc="desc"></rating-select>
+            <rating-select :ratings="ratings" :select-type="selectType" :only-content="onlyContent" :desc="desc" @toggle="showOnlyContent" @select="showRatingList"></rating-select>
             <div class="rating-content">
-                <ul v-show="ratings && ratings.length" class="rating-list">
-                    <li v-for="rating in ratings" class="rating-item" v-show="needShow(rating.rateType,rating.text)" transition="fade">
-                        <div class="user">
-                            <span class="text time">{{rating.rateTime | formatDate}}</span>
-                            <span class="text user-account">{{rating.username}}
-                            <img class="user-avatar" width="12" height="12" :src="rating.avatar" />
-                            </span>
-                        </div>
-                        <div class="rating-text">
-                            <i class="icon" :class="[rating.rateType===0?'icon-thumb_up blue':'icon-thumb_down green']"></i>
-                            <span v-if="rating.text" class="text">{{rating.text}}</span>
-                            <span v-else class="text">暂无评价</span>
-                        </div>
-                    </li>
-                </ul>
+                    <ul v-show="ratings && ratings.length" class="rating-list">
+                        <li v-for="rating in ratings" :key="rating.username" class="rating-item" v-show="needShow(rating.rateType,rating.text)">
+                            <div class="user">
+                                <span class="text time">{{rating.rateTime | formatDate}}</span>
+                                <span class="text user-account">{{rating.username}}
+                                    <img class="user-avatar" width="12" height="12" :src="rating.avatar" />
+                                </span>
+                            </div>
+                            <div class="rating-text">
+                                <i class="icon" :class="[rating.rateType===0?'icon-thumb_up blue':'icon-thumb_down green']"></i>
+                                <span v-if="rating.text" class="text">{{rating.text}}</span>
+                                <span v-else class="text">暂无评价</span>
+                            </div>
+                        </li>
+                    </ul>
             </div>
         </div>
     </div>
@@ -84,7 +84,7 @@ export default {
             if (response.errno === ERR_OK) {
                 this.ratings = response.data;
                 this.$nextTick(() => {
-                    this.scroll = new BScroll(this.$els.ratings, {
+                    this.scroll = new BScroll(this.$refs.ratings, {
                         click: true
                     });
                 });
@@ -106,26 +106,24 @@ export default {
             } else {
                 return type === this.selectType;
             }
+        },
+        showRatingList(type) {
+            this.selectType = type;
+            this.$nextTick(() => {
+                this.scroll.refresh;
+            });
+        },
+        showOnlyContent(onlyContent) {
+            this.onlyContent = onlyContent;
+            this.$nextTick(() => {
+                this.scroll.refresh;
+            });
         }
     },
     filters: {
         formatDate(dateStr) {
             let date = new Date(dateStr);
             return formatDate(date, 'yyyy-MM-dd hh:mm');
-        }
-    },
-    events: {
-        'ratingType.select' (type) {
-            this.selectType = type;
-            this.$nextTick(() => {
-                this.scroll.refresh;
-            });
-        },
-        'content.toggle' (onlyContent) {
-            this.onlyContent = onlyContent;
-            this.$nextTick(() => {
-                this.scroll.refresh;
-            });
         }
     }
 };
@@ -140,11 +138,13 @@ export default {
     overflow: hidden;
     .ratings-view-wrapper {
         .rating-view {
+            display: flex;
+            flex-flow: row nowrap;
             padding: 18px 0;
             .mark-wrapper {
                 display: inline-block;
                 font-size: 0;
-                width: 132px;
+                width: 120px;
                 text-align: center;
                 box-sizing: border-box;
                 vertical-align: top;
@@ -212,14 +212,6 @@ export default {
                 .rating-item {
                     border-bottom: 1px solid rgba(7, 17, 27, 0.1);
                     padding: 16px;
-                    &.fade-transition {
-                        opacity: 1;
-                        transition: all .2s;
-                    }
-                    &.fade-enter,
-                    &.fade-leave {
-                        opacity: 0;
-                    }
                     .user {
                         .text {
                             font-size: 10px;

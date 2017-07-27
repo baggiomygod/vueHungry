@@ -1,44 +1,55 @@
 <template>
-    <div class="goods">
-        <div class="menu-wrapper" v-el:menu-wrapper>
-            <ul class="menu-ul">
-                <li v-for="item in goods" v-on:click="selectMenu($index,$event)" class="menu-item" v-bind:class="{'current':currentLeftIndex===$index}">
-                    <span class="text border-1px">
-                        <span v-show="item.type>0" class="icon" v-bind:class="classMap[item.type]"></span> {{item.name}}
-                    </span>
-                </li>
-            </ul>
+    <div class="goods-wrap">
+        <div class="goods">
+            <div class="menu-wrapper" ref="menuWrapper">
+                <ul class="menu-ul">
+                    <li v-for="(item,$index) in goods" :key="item.type" v-on:click="selectMenu($index,$event)" class="menu-item" :class="{'current':currentLeftIndex===$index}">
+                        <span class="text border-1px">
+                            <span v-show="item.type>0" class="icon" :class="classMap[item.type]"></span> {{item.name}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="foods-wrapper" ref="foodsWrapper">
+                <ul>
+                    <li v-for="item in goods" class="food-list food-list-hook" :key="item.name">
+                        <h1 class="title">{{item.name}}</h1>
+                        <ul>
+                            <li v-for="food in item.foods" :key="food.name" v-on:click="openFoodPage(food,$event)" class="food-item border-1px">
+                                <div class="icon">
+                                    <img width="57" height="57" :src="food.icon" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2 class="name">{{food.name}}</h2>
+                                    <p class="desc">{{food.description}}</p>
+                                    <div class="extra">
+                                        <span>月售{{food.sellCount}}件</span>
+                                        <span>好评率{{food.rating}}%</span>
+                                    </div>
+                                    <div class="price">
+                                        <span class="now">￥
+                                            <span class="now-price">{{food.price}}</span>
+                                        </span>
+                                        <span class="old" v-show="food.oldPrice">￥
+                                            <span class="old-price">{{food.oldPrice}}</span>
+                                        </span>
+                                    </div>
+                                    <div class="cartcontrol-wrapper">
+                                        <cartcontrol @add="addFood" :food="food"></cartcontrol>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <shopcar ref="shopcart" 
+                    :delivery-price="seller.deliveryPrice" 
+                    :min-price="seller.minPrice"
+                    :select-foods="selectFoods"></shopcar>
         </div>
-        <div class="foods-wrapper" v-el:foods-wrapper>
-            <ul>
-                <li v-for="item in goods" class="food-list food-list-hook">
-                    <h1 class="title">{{item.name}}</h1>
-                    <ul>
-                        <li v-for="food in item.foods" v-on:click="openFoodPage(food,$event)" class="food-item border-1px">
-                            <div class="icon"><img width="57" height="57" v-bind:src="food.icon" alt=""></div>
-                            <div class="content">
-                                <h2 class="name">{{food.name}}</h2>
-                                <p class="desc">{{food.description}}</p>
-                                <div class="extra">
-                                    <span>月售{{food.sellCount}}件</span>
-                                    <span>好评率{{food.rating}}%</span>
-                                </div>
-                                <div class="price">
-                                    <span class="now">￥<span class="now-price">{{food.price}}</span></span>
-                                    <span class="old" v-show="food.oldPrice">￥<span class="old-price">{{food.oldPrice}}</span></span>
-                                </div>
-                                <div class="cartcontrol-wrapper">
-                                    <cartcontrol v-bind:food="food"></cartcontrol>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <shopcar v-ref:shopcart v-bind:delivery-price="seller.deliveryPrice" v-bind:min-price="seller.minPrice" v-bind:select-foods="selectFoods"></shopcar>
+        <food :food="selectFood" @add="addFood" ref="food"></food>
     </div>
-    <food v-bind:food="selectFood" v-ref:food></food>
 </template>
 <script>
 import BScroll from 'better-scroll';
@@ -99,21 +110,20 @@ export default {
     },
     methods: {
         _initScroll() {
-            this.menuScroll = new BScroll(this.$els.menuWrapper, {
+            this.menuScroll = new BScroll(this.$refs.menuWrapper, {
                 click: true // betterScroll默认阻止了more时间，需要设置打开
             }); // 获取到$refs DOM
-            this.foodsScroll = new BScroll(this.$els.foodsWrapper, {
+            this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
                 click: true,
                 probeType: 3
             });
             // 监听scroll事件,滚动时，实时拿到scrollY
-
             this.foodsScroll.on('scroll', (pos) => {
                 this.scrollY = Math.abs(Math.round(pos.y));
             });
         },
         _calculateHeight() {
-            let foodsList = this.$els.foodsWrapper.getElementsByClassName('food-list-hook');
+            let foodsList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
             let height = 0;
             this.listHeight.push(height);
             for (let i = 0; i < foodsList.length; i++) {
@@ -128,14 +138,17 @@ export default {
             if (!e._constructed) {
                 return;
             }
-            let foodsList = this.$els.foodsWrapper.getElementsByClassName('food-list-hook'); // 拿到列表数组 List
+            let foodsList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook'); // 拿到列表数组 List
             let targetList = foodsList[index]; // 要滚动到的哪个元素
             this.foodsScroll.scrollToElement(targetList, 300); // 调用betterScroll的接口scrollToElement（目标元素，动画时间）
+        },
+        addFood(target) {
+            this._drop(target);
         },
         _drop(target) {
             // 优化体验，异步执行动画
             this.$nextTick(() => {
-                this.$refs.shopcart.drop(target); // 调用子组件drop方法，子组件标签上v-ref:shopcart
+                this.$refs.shopcart.drop(target); // 调用子组件drop方法，子组件标签上ref="shopcart"
             });
         },
         openFoodPage(food, e) {
@@ -143,8 +156,7 @@ export default {
                 return;
             }
             this.selectFood = food;
-            console.log('sss');
-            this.$refs.food.show(); // 调用子组件方法，<child v-ref:childname ></child>
+            this.$refs.food.show(); // 调用子组件方法，<child ref="childname" ></child>
         }
     },
     // 注册组件
@@ -154,7 +166,7 @@ export default {
         food
     },
     events: { // 接收到子组件传递过来的cart.add事件，调用_drop函数--->_drop调用shopcar子组件的drop函数
-        'cart.add' (target) {
+        'cart.add'(target) {
             this._drop(target);
         }
     }
@@ -243,7 +255,7 @@ export default {
                 margin: 16px;
                 padding-bottom: 16px;
                 @include border-1px(rgba(7, 17, 27, 0.1));
-                :last-child {
+                 :last-child {
                     @include border-none();
                     margin-bottom: 0;
                 }
@@ -270,7 +282,7 @@ export default {
                         font-size: 10px;
                         line-height: 10px;
                         margin-top: 8px;
-                        :first-child {
+                         :first-child {
                             margin-right: 12px;
                         }
                     }
