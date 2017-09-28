@@ -27,8 +27,8 @@ const router = new VueRouter({
 */
 
 router.beforeEach((to, from, next) => {
-    console.log('目标路由to:', to);
-    console.log('上一个路由from:', from);
+    // console.log('目标路由to:', to);
+    // console.log('上一个路由from:', from);
     next();
 });
 

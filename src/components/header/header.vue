@@ -9,7 +9,7 @@
                     <span class="brand"></span>
                     <span class="name">{{seller.name}}</span>
                 </div>
-                <div class="description">{{seller.description}}</div>
+                <div class="description">{{wxCode}},{{wxState}}</div>
                 <!-- v-if判断:数据是异步加载的，当数据还未加载是，seller={},supports为undefined，此时v-if判断后显示空 -->
                 <div class="support" v-if="seller.supports">
                     <span class="icon" v-bind:class="classMap[seller.supports[0].type]"></span>
@@ -53,7 +53,10 @@
                         <div class="line"></div>
                     </div>
                     <div class="detail-text">
-                        <p class="text">{{seller.bulletin}}</p>
+                        <p class="text">code:{{wxCode}}</p>
+                        <p class="text">state:{{wxState}}</p>
+                        <p class="text">accessToken:{{accessToken}}</p>
+                        <p class="text">openid:{{openid}}</p>
                     </div>
                 </div>
             </div>
@@ -70,6 +73,14 @@ export default {
     props: {
         seller: {
             type: Object
+        },
+        wxCode: {
+            type: String,
+            defaule: ''
+        },
+        wxState: {
+            type: String,
+            defaule: ''
         }
     },
     data() {

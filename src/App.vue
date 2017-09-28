@@ -1,17 +1,7 @@
 <template>
     <div>
-        <v-header :seller="seller"></v-header>
-        <div class="tab border-1px">
-            <div class="tab-item">
-                <router-link to="/goods">商品</router-link>
-            </div>
-            <div class="tab-item">
-                <router-link to="/ratings">评论</router-link>
-            </div>
-            <div class="tab-item">
-                <router-link to="/seller">商家</router-link>
-            </div>
-        </div>
+        <v-header :seller="seller" :wx-code="code" :wx-state="state"></v-header>
+        <v-menus></v-menus>
         <keep-alive>
             <router-view :seller="seller"></router-view>
         </keep-alive>
@@ -20,15 +10,39 @@
 <script>
 import header from 'components/header/header.vue';
 import goods from 'components/goods/goods.vue';
-
+import menus from 'components/menus/menus.vue';
+import wxUtil from './utils/wxUtil';
+// const OAUTH2API = 'https://api.weixin.qq.com/sns/oauth2/access_token?'; // appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code;
 const ERR_OK = 0;
 export default {
+    mixins: [wxUtil],
     data() {
         return {
-            seller: {}
+            seller: {},
+            code: '',
+            state: '',
+            accessToken: '',
+            openid: '',
+            appID: 'wxc37f7db9c9c1198e', // 测试账号
+            appSecret: '585e2f51c10c0434469c88d6a6102b1c' // 测试账号
         };
     },
     created() {
+        this.code = this.$route.query.code;
+        this.state = this.$route.query.state;
+        this.getAccessToken(this.code).then(res => {
+                this.accessToken = res.access_token;
+                this.openid = res.openid;
+                // if (access_token && openid) {
+                    // wechat.getUsrInfo(access_token, openid).then(data => {
+                    //     console.log('*********user indo:', data);
+                    // });
+                // }
+        }).catch(err => {
+            console.log(err);
+        });
+        // this.getAccesstoken(this.code, this.state);
+        // 获取seller数据
         this.$http.get('/api/seller').then((response) => {
             response = response.body;
             if (response.errno === ERR_OK) {
@@ -38,29 +52,26 @@ export default {
     },
     components: {
         'v-header': header,
-        'v-goods': goods
+        'v-goods': goods,
+        'v-menus': menus
+    },
+    methods: {
+        getAccesstoken(code, state) {
+            console.log('code:', code);
+            this.$http.jsonp(
+                'https://wxfan.localtunnel.me/wx_oauth2',
+                {
+                    params:
+                    { code: this.code },
+                    jsonp: 'callback'
+                }
+            ).then(res => {
+                console.log(res);
+            });
+        }
     }
 };
 </script>
 <style lang="scss" rel="stylesheet/scss">
-@import "common/style/mixin";
-.tab {
-    display: flex;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    @include border-1px(rgba(7, 17, 27, 0.1));
-    .tab-item {
-        flex: 1;
-        text-align: center;
-        a {
-            display: block;
-            font-size: 14px;
-            color: rgb(77, 85, 93);
-        }
-        a.active {
-            color: rgb(240, 20, 20);
-        }
-    }
-}
+
 </style>
