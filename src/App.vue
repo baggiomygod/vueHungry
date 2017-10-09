@@ -1,11 +1,6 @@
 <template>
     <div>
-        <v-header :seller="seller" 
-                  :wx-code="code" 
-                  :wx-state="state" 
-                  :access-token="accessToken" 
-                  :openid="openId"
-                  :user-info="userInfo"></v-header>
+        <v-header :seller="seller" :wx-code="code" :wx-state="state" :access-token="accessToken" :openid="openId" :user-info="userInfo"></v-header>
         <v-menus></v-menus>
         <keep-alive>
             <router-view :seller="seller"></router-view>
@@ -25,14 +20,14 @@ export default {
         return {
             seller: {},
             userInfo: {
-                    openid: '',
-                    nickname: '',
-                    sex: '',
-                    province: '',
-                    country: '',
-                    headimgurl: '',
-                    privilege: [],
-                    unionid: ''
+                openid: '',
+                nickname: '',
+                sex: '',
+                province: '',
+                country: '',
+                headimgurl: '',
+                privilege: [],
+                unionid: ''
             },
             code: '',
             accessToken: '',
@@ -44,16 +39,21 @@ export default {
             appSecret: '585e2f51c10c0434469c88d6a6102b1c' // 测试账号
         };
     },
+    components: {
+        'v-header': header,
+        'v-goods': goods,
+        'v-menus': menus
+    },
     created() {
         this.code = this.$route.query.code;
         this.state = this.$route.query.state;
         // 获取seller数据
         this.getSellerData();
-    },
-    components: {
-        'v-header': header,
-        'v-goods': goods,
-        'v-menus': menus
+        // code换取access_token
+        this.getAccessTokenByCode()
+            .then(() => {
+                this.getUserInfo(); // 获取用户信息
+            });
     },
     methods: {
         // 获取seller数据
@@ -67,26 +67,29 @@ export default {
         },
         getAccessTokenByCode() {
             this.$http.get(`${this.mainUrl}/wx_oauth2?code=${this.code}`)
-                    .then(res => {
+                .then(res => {
+                    return new Promise((resolve, reject) => {
                         if (res.errcode) {
                             console.log(res.data.errcode);
+                            reject(res.errcode);
                         } else {
-                            console.log(res.data);
                             this.accessToken = res.data.access_token;
                             this.openId = res.data.openid;
+                            resolve();
                         }
-                    });
-            },
+                    })
+                });
+        },
         getUserInfo() { // 获取用户信息 https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
             this.$http
-                    .get(`${this.mainUrl}/user_info?access_token=${this.accessToken}&openid=${this.openId}`)
-                    .then(res => {
-                        if (res.data.errcode) {
-                            console.log(res.data);
-                        } else {
-                            this.userInfo = res.data;
-                        }
-                    });
+                .get(`${this.mainUrl}/user_info?access_token=${this.accessToken}&openid=${this.openId}`)
+                .then(res => {
+                    if (res.data.errcode) {
+                        console.log(res.data);
+                    } else {
+                        this.userInfo = res.data;
+                    }
+                });
         }
     }
 };
