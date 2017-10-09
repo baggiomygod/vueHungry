@@ -2,14 +2,14 @@
     <div class="header">
         <div class="content-wrapper">
             <div class="avatar">
-                <img width="64" height="64" v-bind:src="seller.avatar" alt="图标">
+                <img width="64" height="64" :src="headImgUrl" alt="图标">
             </div>
             <div class="content">
                 <div class="title">
                     <span class="brand"></span>
-                    <span class="name">{{seller.name}}</span>
+                    <span class="name">{{userInfo.nickname}}</span>
                 </div>
-                <div class="description">{{wxCode}},{{wxState}}</div>
+                <div class="description">{{userInfo.province}},{{userInfo.country}},{{userInfo.sex}}</div>
                 <!-- v-if判断:数据是异步加载的，当数据还未加载是，seller={},supports为undefined，此时v-if判断后显示空 -->
                 <div class="support" v-if="seller.supports">
                     <span class="icon" v-bind:class="classMap[seller.supports[0].type]"></span>
@@ -68,7 +68,7 @@
     </div>
 </template>
 <script>
-import star from 'components/star/star.vue';
+import star from 'views/star/star.vue';
 export default {
     props: {
         seller: {
@@ -81,12 +81,41 @@ export default {
         wxState: {
             type: String,
             defaule: ''
+        },
+        accessToken: {
+            type: String,
+            defaule: ''
+        },
+        openid: {
+            type: String,
+            defaule: ''
+        },
+        userInfo: {
+            type: Object,
+            default() {
+                return {
+                    openid: '',
+                    nickname: '',
+                    sex: '',
+                    province: '',
+                    country: '',
+                    headimgurl: '',
+                    privilege: [],
+                    unionid: ''
+                };
+            }
         }
     },
     data() {
         return {
             detailShow: false
         };
+    },
+    computed: {
+        headImgUrl() {
+            let url = this.userInfo.headimgurl ? this.userInfo.headimgurl : this.seller.avatar;
+            return url;
+        }
     },
     methods: {
         showDetail() {

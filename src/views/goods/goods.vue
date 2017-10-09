@@ -53,9 +53,9 @@
 </template>
 <script>
 import BScroll from 'better-scroll';
-import shopcar from 'components/shopcar/shopcar'; // 引入组件
-import cartcontrol from 'components/cartcontrol/cartcontrol';
-import food from 'components/food/food';
+import shopcar from 'views/shopcar/shopcar'; // 引入组件
+import cartcontrol from 'views/cartcontrol/cartcontrol';
+import food from 'views/food/food';
 const ERR_OK = 0;
 export default {
     props: {

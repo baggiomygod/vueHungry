@@ -77,8 +77,8 @@
     </div>
 </template>
 <script>
-import star from 'components/star/star.vue';
-import split from 'components/splits/split';
+import star from 'views/star/star.vue';
+import split from 'views/splits/split';
 import BScroll from 'better-scroll';
 
 export default {

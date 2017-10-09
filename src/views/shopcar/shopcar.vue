@@ -56,7 +56,7 @@
 </template>
  <script type="text/javascript">
 import BScroll from 'better-scroll';
-import cartcontrol from 'components/cartcontrol/cartcontrol';
+import cartcontrol from 'views/cartcontrol/cartcontrol';
 export default {
     props: {
         deliveryPrice: {

@@ -1,7 +1,7 @@
-import goods from 'components/goods/goods';
-import ratings from 'components/ratings/ratings';
-import seller from 'components/seller/seller';
-import test from 'components/test/test2';
+import goods from 'views/goods/goods';
+import ratings from 'views/ratings/ratings';
+import seller from 'views/seller/seller';
+import test from 'views/test/test2';
 
 let routes = [{
     path: '/goods',

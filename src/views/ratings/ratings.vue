@@ -51,9 +51,9 @@
     </div>
 </template>
 <script>
-import star from 'components/star/star';
-import split from 'components/splits/split';
-import ratingSelect from 'components/ratingSelect/ratingSelect';
+import star from 'views/star/star';
+import split from 'views/splits/split';
+import ratingSelect from 'views/ratingSelect/ratingSelect';
 import BScroll from 'better-scroll';
 import {
     formatDate

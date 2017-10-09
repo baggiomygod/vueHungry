@@ -62,9 +62,9 @@ import {
     formatDate
 } from 'common/js/date';
 import BScroll from 'better-scroll';
-import cartcontrol from 'components/cartcontrol/cartcontrol';
-import split from 'components/splits/split';
-import ratingSelect from 'components/ratingSelect/ratingSelect';
+import cartcontrol from 'views/cartcontrol/cartcontrol';
+import split from 'views/splits/split';
+import ratingSelect from 'views/ratingSelect/ratingSelect';
 import Vue from 'vue';
 const ALL = 2;
 export default {
