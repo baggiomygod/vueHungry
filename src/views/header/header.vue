@@ -52,12 +52,12 @@
                         <div class="text">关于我们</div>
                         <div class="line"></div>
                     </div>
-                    <div class="detail-text">
+                   <!--  <div class="detail-text">
                         <p class="text">code:{{wxCode}}</p>
                         <p class="text">state:{{wxState}}</p>
                         <p class="text">accessToken:{{accessToken}}</p>
                         <p class="text">openid:{{openid}}</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="detail-close" v-on:click="hidenDetail">
