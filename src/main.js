@@ -19,5 +19,5 @@ new Vue({
 });
 
 // 打开的默认路径
-router.push('/icon');
-// router.push('/goods');
+// router.push('/icon');
+router.push('/goods');

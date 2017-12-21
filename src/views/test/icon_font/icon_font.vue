@@ -2,7 +2,11 @@
     <div class="icon-font-warp">
       <div v-for="item in classMap" :key="item.icon" v-drag="greet"  :class="{'can-drag':item.draggable}">
         <i class="icon" :class="item.icon"></i>
-        <span class="icon-tip" v-if="item.draggable">可拖拽 x:{{dragVal.x}},y:{{dragVal.y}}</span>
+        <div class="icon-tip" v-if="item.draggable">
+          <span>PC端可拖拽</span>
+          <span>x:{{dragVal.x}},y:{{dragVal.y}}</span>
+        </div>
+
       </div>
 
     </div>
@@ -46,10 +50,14 @@ export default {
     // float: left;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-around;
     text-align: center;
     position: absolute;
     color: #c39797;
     .icon-tip{
+      display: flex;
+      flex-direction: column;
       font-size: .5rem;
     }
   }
