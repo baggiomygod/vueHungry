@@ -43,8 +43,8 @@
                     </li>
                 </ul>
             </div>
-            <shopcar ref="shopcart" 
-                    :delivery-price="seller.deliveryPrice" 
+            <shopcar ref="shopcart"
+                    :delivery-price="seller.deliveryPrice"
                     :min-price="seller.minPrice"
                     :select-foods="selectFoods"></shopcar>
         </div>
@@ -53,9 +53,9 @@
 </template>
 <script>
 import BScroll from 'better-scroll';
-import shopcar from 'views/shopcar/shopcar'; // 引入组件
-import cartcontrol from 'views/cartcontrol/cartcontrol';
-import food from 'views/food/food';
+import shopcar from 'views/components/shopcar/shopcar'; // 引入组件
+import cartcontrol from 'views/components/cartcontrol/cartcontrol';
+import food from 'views/products/food/food';
 const ERR_OK = 0;
 export default {
     props: {
@@ -173,7 +173,7 @@ export default {
 };
 </script>
 <style lang="scss" rel="stylesheet/scss">
-@import "../../common/style/mixin";
+@import "../../../common/style/mixin";
 .goods {
     display: flex;
     position: absolute;

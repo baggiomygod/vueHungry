@@ -77,8 +77,8 @@
     </div>
 </template>
 <script>
-import star from 'views/star/star.vue';
-import split from 'views/splits/split';
+import star from 'views/components/star/star.vue';
+import split from 'views/components/splits/split';
 import BScroll from 'better-scroll';
 
 export default {
@@ -155,7 +155,7 @@ export default {
 };
 </script>
 <style lang="scss" rel="stylesheet/scss">
-@import "../../common/style/mixin";
+@import "../../../common/style/mixin";
 .seller {
     position: absolute;
     width: 100%;

@@ -1,7 +1,8 @@
-import goods from 'views/goods/goods';
+import goods from 'views/products/goods/goods';
 import ratings from 'views/ratings/ratings';
-import seller from 'views/seller/seller';
+import seller from 'views/sellers/seller/seller';
 import test from 'views/test/test2';
+import icon from 'views/test/icon_font/icon_font';
 
 let routes = [{
     path: '/goods',
@@ -22,6 +23,11 @@ let routes = [{
     path: '/test',
     name: 'test',
     component: test
+  },
+  {
+    path: '/icon',
+    name: '图标',
+    component: icon
   }
 ];
 export default routes;

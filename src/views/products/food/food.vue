@@ -62,9 +62,9 @@ import {
     formatDate
 } from 'common/js/date';
 import BScroll from 'better-scroll';
-import cartcontrol from 'views/cartcontrol/cartcontrol';
-import split from 'views/splits/split';
-import ratingSelect from 'views/ratingSelect/ratingSelect';
+import cartcontrol from 'views/components/cartcontrol/cartcontrol';
+import split from 'views/components/splits/split';
+import ratingSelect from 'views/ratings/ratingSelect/ratingSelect';
 import Vue from 'vue';
 const ALL = 2;
 export default {
@@ -163,7 +163,7 @@ export default {
 };
 </script>
 <style lang="scss" rel="stylesheet/scss">
-@import "../../common/style/mixin";
+@import "../../../common/style/mixin";
 .food {
     position: fixed;
     top: 0;

@@ -12,7 +12,8 @@
                 <div class="description">{{userInfo.province}},{{userInfo.country}},{{userInfo.sex}}</div>
                 <!-- v-if判断:数据是异步加载的，当数据还未加载是，seller={},supports为undefined，此时v-if判断后显示空 -->
                 <div class="support" v-if="seller.supports">
-                    <span class="icon" v-bind:class="classMap[seller.supports[0].type]"></span>
+                    <i class="icon icon-thumb_up"></i>
+                    <!-- <span class="icon" :class="classMap[seller.supports[0].type]"></span> -->
                     <span class="text">{{seller.supports[0].description}}</span>
                 </div>
             </div>
@@ -68,7 +69,7 @@
     </div>
 </template>
 <script>
-import star from 'views/star/star.vue';
+import star from 'views/components/star/star.vue';
 export default {
     props: {
         seller: {
@@ -113,7 +114,7 @@ export default {
     },
     computed: {
         headImgUrl() {
-            let url = this.userInfo.headimgurl ? this.userInfo.headimgurl : this.seller.avatar;
+            let url = this.userInfo.headimgurl ? this.userInfo.headimgurl : this.seller.avatar1;
             return url;
         }
     },
@@ -136,7 +137,7 @@ export default {
 };
 </script>
 <style rel="stylesheet/scss" lang="scss">
-@import "../../common/style/mixin";
+@import "../../../common/style/mixin";
 .header {
     position: relative;
     color: #fff;

@@ -17,7 +17,7 @@
     "supports": [
       {
         "type": 0,
-        "description": "买手机送会员+减100"
+        "description": "科技改变生活!"
       },
       {
         "type": 1,
@@ -36,6 +36,7 @@
         "description": "15天退换"
       }
     ],
+    "avatar1": "static/img/icon/one.png",
     "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/meizuavatar.png",
     "pics": [
       "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",

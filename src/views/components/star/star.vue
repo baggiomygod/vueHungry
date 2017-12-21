@@ -45,7 +45,7 @@ export default {
 };
 </script>
 <style rel="stylesheet/scss" lang="scss">
-@import "../../common/style/mixin";
+@import "../../../common/style/mixin";
 .star {
     font-size: 0;
     .star-item {

@@ -5,10 +5,13 @@
     <div class="v-test">
         <button @click="getAccessTokenByCode" class="btn">getaccessToken</button>
         <button @click="getUserInfo" class="btn">getUserInfo</button>
+
+        <hr>
+        <i class="icon icon-favorite"></i>
     </div>
 </template>
 <script>
-import cartcontrol from 'views/cartcontrol/cartcontrol';
+import cartcontrol from 'views/components/cartcontrol/cartcontrol';
 // import WxServer from '../../service/wxserver';
 
 export default {

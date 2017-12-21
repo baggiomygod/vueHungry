@@ -8,9 +8,9 @@
     </div>
 </template>
 <script>
-import header from '../header/header.vue';
-import goods from '../goods/goods.vue';
-import menus from '../menus/menus.vue';
+import header from './header/header.vue';
+import goods from 'views/products/goods/goods.vue';
+import menus from './menus/menus.vue';
 import wxUtil from '../../utils/wxUtil';
 // const OAUTH2API = 'https://api.weixin.qq.com/sns/oauth2/access_token?'; // appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code;
 const ERR_OK = 0;
