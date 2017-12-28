@@ -3,6 +3,8 @@ import ratings from 'views/ratings/ratings';
 import seller from 'views/sellers/seller/seller';
 import test from 'views/test/test2';
 import icon from 'views/test/icon_font/icon_font';
+import zoom from 'views/test/zoom/zoom';
+import tip from 'views/test/tip/tip';
 
 let routes = [{
     path: '/goods',
@@ -28,6 +30,16 @@ let routes = [{
     path: '/icon',
     name: '图标',
     component: icon
+  },
+  {
+    path: '/zoom',
+    name: '缩放',
+    component: zoom
+  },
+  {
+    path: '/tip',
+    name: 'tip',
+    component: tip
   }
 ];
 export default routes;

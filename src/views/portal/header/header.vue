@@ -22,10 +22,10 @@
                 <i class="icon-keyboard_arrow_right"></i>
             </div>
         </div>
-        <div class="bulletin-wrapper" v-on:click="showDetail">
+        <!-- <div class="bulletin-wrapper" v-on:click="showDetail">
             <span class="bullectin-icon"></span><span class="bullection-text">{{seller.bulletin}}</span>
             <i class="icon-keyboard_arrow_right"></i>
-        </div>
+        </div> -->
         <div class="background">
             <img v-bind:src="seller.avatar" alt="" width="100%" height="100%">
         </div>

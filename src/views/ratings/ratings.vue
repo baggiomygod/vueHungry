@@ -1,5 +1,5 @@
 <template>
-    <div class="ratings" ref="ratings">
+    <div class="ratings view-page" ref="ratings">
         <div class="ratings-view-wrapper">
             <div class="rating-view">
                 <div class="mark-wrapper">
@@ -131,7 +131,8 @@ export default {
 <style lang="scss" rel="stylesheet/scss">
 .ratings {
     position: absolute;
-    top: 174px;
+    // top: 174px;
+    top: 146px;
     bottom: 0;
     left: 0;
     width: 100%;

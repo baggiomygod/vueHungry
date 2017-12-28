@@ -3,6 +3,10 @@ var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 
+var env = process.env.NODE_ENV
+var cssSourceMapDev = (env === 'development' && config.dev.cssSourceMap)
+var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap)
+var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 module.exports = {
 	entry: {
 		app: './src/main.js'
@@ -16,10 +20,12 @@ module.exports = {
 		extensions: ['', '.js', '.vue'],
 		fallback: [path.join(__dirname, '../node_modules')],
 		alias: {
+      'vue$': 'vue/dist/vue.common.js',
 			'src': path.resolve(__dirname, '../src'),
 			'common': path.resolve(__dirname, '../src/common'),
 			'views': path.resolve(__dirname, '../src/views'),
-			'static': path.resolve(__dirname, '../static')
+			'static': path.resolve(__dirname, '../static'),
+			'utils': path.resolve(__dirname, '../src/utils'),
 		}
 	},
 	resolveLoader: {
@@ -44,20 +50,20 @@ module.exports = {
 			{
 				test: /\.vue$/,
 				loader: 'vue'
-			},
-			{
+      },
+      {
 				test: /\.js$/,
 				loader: 'babel',
 				include: projectRoot,
 				exclude: /node_modules/
 			},
+      { // .vue ---> .html+.js
+        test:/\.html$/,
+        loader:'vue-html'
+      },
 			{
 				test: /\.json$/,
 				loader: 'json'
-			},
-			{
-				test: /\.html$/,
-				loader: 'vue-html'
 			},
 			{
 				test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -81,6 +87,16 @@ module.exports = {
 		formatter: require('eslint-friendly-formatter')
 	},
 	vue: {
-		loaders: utils.cssLoaders()
+    // loaders: utils.cssLoaders()
+    // html: {
+    //   // all loader queries can be specified here
+    //   // also, you can specify options for htmlMinifier here.
+    // },
+    loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['last 2 versions']
+      })
+    ]
 	}
 }

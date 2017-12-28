@@ -1,0 +1,14 @@
+  <div class="nav-wrap">
+        <div class="nav">
+          <p class="l-grade"></p>
+          <ul class="nav-menus">
+            <li class="nav-item" v-for="item in config" :key="item.url" @click="changeHeader(item.menu_name)">
+              <router-link :to="item.url" active-class="active">{{item.menu_name}}</router-link>
+            </li>
+          </ul>
+          <p class="r-grade"></p>
+          <p class="more-menus">
+            <i class="more-icon icon iconfont" @click="changeNav">&#xe772;</i>
+          </p>
+        </div>
+  </div>

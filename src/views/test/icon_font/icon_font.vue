@@ -3,12 +3,13 @@
       <div v-for="item in classMap" :key="item.icon" v-drag="greet"  :class="{'can-drag':item.draggable}">
         <i class="icon" :class="item.icon"></i>
         <div class="icon-tip" v-if="item.draggable">
-          <span>PC端可拖拽</span>
+          <span>终端:{{dragVal.type}}</span>
           <span>x:{{dragVal.x}},y:{{dragVal.y}}</span>
         </div>
 
       </div>
 
+      <div ></div>
     </div>
 </template>
 <script>
@@ -16,21 +17,21 @@ export default {
   data() {
     return {
       isDraggable: true,
-      dragVal: {x: 0, y: 0}
+      dragVal: {x: 0, y: 0, type: ''}
     };
   },
   created() {
     this.classMap = [
-      { icon: 'icon-favorite', draggable: true },
-      { icon: 'icon-add_circle', draggable: false },
-      { icon: 'icon-arrow_lift', draggable: false },
-      { icon: 'icon-check_circle', draggable: false },
-      { icon: 'icon-close', draggable: false },
-      { icon: 'icon-keyboard_arrow_right', draggable: false },
-      { icon: 'icon-remove_circle_outline', draggable: false },
-      { icon: 'icon-shopping_cart', draggable: false },
-      { icon: 'icon-thumb_down', draggable: false },
-      { icon: 'icon-thumb_up', draggable: false }
+      // { icon: 'icon-favorite', draggable: false },
+      // { icon: 'icon-add_circle', draggable: false },
+      // { icon: 'icon-arrow_lift', draggable: false },
+      // { icon: 'icon-close', draggable: false },
+      // { icon: 'icon-keyboard_arrow_right', draggable: false },
+      // { icon: 'icon-remove_circle_outline', draggable: false },
+      // { icon: 'icon-shopping_cart', draggable: false },
+      // { icon: 'icon-thumb_down', draggable: false },
+      // { icon: 'icon-thumb_up', draggable: false },
+      { icon: 'icon-check_circle', draggable: true }
     ];
   },
   methods: {

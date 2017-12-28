@@ -1,5 +1,5 @@
 <template>
-    <div class="seller" ref="seller">
+    <div class="seller view-page" ref="seller">
         <div class="seller-content">
             <div class="seller-brief">
                 <h1 class="title">{{seller.name}}</h1>
@@ -159,7 +159,7 @@ export default {
 .seller {
     position: absolute;
     width: 100%;
-    top: 180px;
+    // top: 180px;
     left: 0;
     bottom: 0;
     width: 100%;

@@ -34,3 +34,20 @@
 		display: none;
 	}
 }
+// flex
+@mixin justifyAlignItems($justify,$alignItems){
+	justify-content:$justify;
+	align-items:$alignItems
+}
+// 字体
+@mixin font-dpr($font-size){
+    font-size: $font-size;
+
+    [data-dpr="2"] & {
+        font-size: $font-size * 2;
+    }
+
+    [data-dpr="3"] & {
+        font-size: $font-size * 3;
+    }
+}

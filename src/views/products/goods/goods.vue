@@ -1,6 +1,6 @@
 <template>
     <div class="goods-wrap">
-        <div class="goods">
+        <div class="goods view-page">
             <div class="menu-wrapper" ref="menuWrapper">
                 <ul class="menu-ul">
                     <li v-for="(item,$index) in goods" :key="item.type" v-on:click="selectMenu($index,$event)" class="menu-item" :class="{'current':currentLeftIndex===$index}">

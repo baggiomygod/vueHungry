@@ -27,6 +27,10 @@ export default {
                     name: '图标'
                 },
                 {
+                  path: '/zoom',
+                  name: '缩放'
+                },
+                {
                     path: '/test',
                     name: 'test'
                 }
