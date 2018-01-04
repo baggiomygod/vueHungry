@@ -1,3 +1,7 @@
+/**
+ * 返回当前浏览器的用户代理字符串
+ * 判断PC端 移动端
+ */
 export default () => {
   var userAgentInfo = navigator.userAgent;
   var Agents = ['Android', 'iPhone',

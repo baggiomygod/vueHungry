@@ -22,5 +22,5 @@ new Vue({
 });
 
 // 打开的默认路径
-router.push('/icon');
+router.push('/tip');
 // router.push('/goods');

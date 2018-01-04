@@ -6,11 +6,11 @@
             </div>
             <div class="content">
                 <div class="title">
-                    <span class="brand"></span>
+                    <!-- <span class="brand"></span> -->
+                    <i class="icon iconfont icon-danxuan"></i>
                     <span class="name">{{userInfo.nickname}}</span>
                 </div>
                 <div class="description">{{userInfo.province}},{{userInfo.country}},{{userInfo.sex}}</div>
-                <!-- v-if判断:数据是异步加载的，当数据还未加载是，seller={},supports为undefined，此时v-if判断后显示空 -->
                 <div class="support" v-if="seller.supports">
                     <i class="icon icon-thumb_up"></i>
                     <!-- <span class="icon" :class="classMap[seller.supports[0].type]"></span> -->
@@ -96,13 +96,13 @@ export default {
             default() {
                 return {
                     openid: '',
-                    nickname: '',
-                    sex: '',
-                    province: '',
-                    country: '',
+                    nickname: 'test',
+                    sex: '男',
+                    province: '浙江省',
+                    country: '中国',
                     headimgurl: '',
                     privilege: [],
-                    unionid: ''
+                    unionid: '' // 婚姻状况
                 };
             }
         }
@@ -160,6 +160,9 @@ export default {
             margin-left: 16px;
             .title {
                 margin: 2px 0 8px 0;
+                .icon{
+                  font-size: 16px;
+                }
                 .brand {
                     width: 30px;
                     height: 18px;

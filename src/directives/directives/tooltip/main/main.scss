@@ -1,0 +1,33 @@
+.tooltip-wrap{
+  // 浅色风格
+  $light-bgcolor: #fff;
+  $light-bdcolor: #d9d9d9;
+  $light-fontcolor: #d9d9d9;
+  // 深色风格
+  $dark-bdcolor: #1f2d3d;
+  $dark-bgcolor: #1f2d3d;
+  $dark-fontcolor: #fff;
+
+  position: absolute;
+  width: 200px;
+  height: auto;
+  padding: 5px;
+  background-color: $dark-bgcolor;
+  color:$dark-fontcolor;
+  text-align: center;
+  border-radius: 4px;
+  // .tooltip-content{}
+  .tooltip-arrow{
+    position: absolute;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border-color: transparent;
+    border-style: inherit;
+    border-width: 10px;
+    &::after{
+
+    }
+  }
+}

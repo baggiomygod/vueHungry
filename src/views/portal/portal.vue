@@ -11,7 +11,6 @@
 <script>
 import header from './header/header.vue';
 import goods from 'views/products/goods/goods.vue';
-import menus from './menus/menus.vue';
 import wxUtil from '../../utils/wxUtil';
 import ScrollMenus from 'views/components/scroll-menus/scroll-menus';
 // import AllMenus from 'views/components/all-menus/all-menus';
@@ -57,7 +56,6 @@ export default {
   components: {
     'v-header': header,
     'v-goods': goods,
-    'v-menus': menus,
     ScrollMenus
     // AllMenus
   },

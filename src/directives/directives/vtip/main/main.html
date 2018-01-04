@@ -1,0 +1,24 @@
+  <transition name="v-tip-fade">
+    <div v-show="visible"
+        class="v-tip-container"
+        :style="boxStyle"
+        :class="boxClass"
+        @mouseenter="showTip"
+        @mouseleave="hiddenTip(false)">
+      <div v-show="placement"
+          class="v-tip-arrows"
+          :class="placement"
+          :style="arrowBox"></div>
+        <span v-if="title" class="v-tip-title">
+          {{title}}
+        </span>
+        <p v-if="content" class="v-tip-content" :style="contentHeight">{{content}}</p>
+        <component
+          v-if="customComponent"
+          v-bind="customProps"
+          v-on="customListeners"
+          :is="customComponent"
+          @hidden-tip="hiddenTip"
+          @update-tip="updateTip"></component>
+    </div>
+  </transition>

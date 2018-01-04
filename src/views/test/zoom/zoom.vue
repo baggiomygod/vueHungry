@@ -1,18 +1,39 @@
 <template>
       <div class="zoom-warp">
+        <div class="icon-tip">
+            <span>终端:{{dragVal.type}}</span>
+            <span>x:{{dragVal.x}},y:{{dragVal.y}}</span>
+        </div>
         <div class="zoom-box" v-drag="greet" v-zoom>
           <div class="zoom-ctrl"></div>
+        </div>
+        <div v-for="item in classMap" :key="item.icon" v-drag="greet"  :class="{'can-drag':item.draggable}">
+          <i class="icon" :class="item.icon"></i>
+          <!-- <div class="icon-tip" v-if="item.draggable">
+            <span>终端:{{dragVal.type}}</span>
+            <span>x:{{dragVal.x}},y:{{dragVal.y}}</span>
+          </div> -->
         </div>
       </div>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      isDraggable: true,
+      dragVal: { x: 0, y: 0, type: '' }
+    };
+  },
+  created() {
+    this.classMap = [
+      // { icon: 'icon-thumb_up', draggable: false },
+      { icon: 'icon-check_circle', draggable: true }
+    ];
   },
   methods: {
     greet(val) {
-      // console.log('val', val);
+      // val是通过指令注册时，binding.value({...}) 传出的值
+      this.dragVal = val;
     }
   }
 };
@@ -38,6 +59,31 @@ export default {
           bottom: 0;
         }
     }
+    .icon {
+      font-size: 36px;
+      color: #c39797;
+    }
+    .can-drag {
+    // float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    top: 260px;
+    left: 60px;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    // .icon {
+    //   font-size: 36px;
+    //   color: #c39797;
+    // }
+    .icon-tip {
+      display: flex;
+      flex-direction: column;
+      color: #c39797;
+    }
+  }
 }
 
 </style>

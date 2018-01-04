@@ -22,15 +22,15 @@ export default (el, binding, vnode) => {
     document[EVENT_MOVE] = function (e) {
       event = touchEvent(e);
       // 通过事件委托，计算移动的距离
-      let l = event.clientX - disX;
-      let t = event.clientY - disY;
+      let l = (e.clientX - disX > 0) ? e.clientX - disX : 0;
+      let t = (e.clientY - disY > 0) ? e.clientY - disY : 0;
       // 移动当前元素
       oDiv.style.left = l + 'px';
       oDiv.style.top = t + 'px';
       // 将此时的位置传出去---v-drag="greet",greet(val)方法接收value传出的值
       binding.value({
-        x: e.pageX,
-        y: e.pageY,
+        x: Math.round(event.pageX),
+        y: Math.round(event.pageY),
         type: M_PC ? 'PC' : '移动端'
       });
     };
