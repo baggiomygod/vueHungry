@@ -13,24 +13,26 @@ const EVENT_END = M_PC ? 'onmouseup' : 'ontouchend';
 export default (el, binding, vnode) => {
   let oDiv = el; // 当前元素
   let event;
+
   oDiv[EVENT_START] = function (e) {
     event = touchEvent(e);
     // 鼠标按下，计算当前元素距离可视区的距离
     let disX = event.clientX - oDiv.offsetLeft; // e.clientX鼠标按下时的位置 - 元素的坐标
     let disY = event.clientY - oDiv.offsetTop;
 
-    // 如果目标元素 不是absolute 手动设置（position:absolute才可以拖动）----bug会闪一下
+    // 可拖动元素必须为absolute
+    let initialPosition = oDiv.getBoundingClientRect();
     if (oDiv.style.position !== 'absolute') {
-      oDiv.style.top = oDiv.offsetTop;
-      oDiv.style.left = oDiv.offsetLeft;
+      oDiv.style.left = initialPosition.left;
+      oDiv.style.top = initialPosition.top;
       oDiv.style.position = 'absolute';
     }
 
     document[EVENT_MOVE] = function (e) {
       event = touchEvent(e);
       // 通过事件委托，计算移动的距离
-      let l = (e.clientX - disX > 0) ? e.clientX - disX : 0;
-      let t = (e.clientY - disY > 0) ? e.clientY - disY : 0;
+      let l = (event.clientX - disX > 0) ? event.clientX - disX : 0;
+      let t = (event.clientY - disY > 0) ? event.clientY - disY : 0;
       // 移动当前元素
       oDiv.style.left = l + 'px';
       oDiv.style.top = t + 'px';

@@ -1,16 +1,18 @@
 <template>
       <div class="tip-warp">
-        <p class="tip" v-tip.dark="tempTip">参考 tips</p>
-        <div v-drag v-simple-tip.dark.bottom="contentTest">
+        <div class="tip-item">
+          <p class="tip exam-tip" v-tip.dark="tempTip">参考 tips</p>
+        </div>
+        <div class="tip-item" v-simple-tip.dark.bottom="contentTest">
           <i class="tip icon iconfont icon-xiangxia2"></i>
         </div>
-        <div v-drag v-simple-tip.light.right="contentTest">
+        <div class="tip-item" v-simple-tip.light.right="contentTest">
           <i class="tip icon iconfont icon-xiangyou1"></i>
         </div>
-        <div v-drag v-simple-tip.light.left="contentTest">
+        <div class="tip-item" v-simple-tip.light.left="contentTest">
           <i class="tip icon iconfont icon-xiangzuo1"></i>
         </div>
-        <div v-drag v-simple-tip.light.top="contentTest">
+        <div class="tip-item" v-drag v-simple-tip.light.top="contentTest">
           <i class="tip icon iconfont icon-xiangshang2"></i>
         </div>
       </div>
@@ -37,13 +39,19 @@ export default {
 .tip-warp{
     // position: relative;
     display: flex;
-    flex-flow: row wrap;
-    .tip{
-      margin: 15px;
-      font-size: 24px;
-      color: #333;
+    flex-flow: column nowrap;
+    .tip-item{
+      // position: absolute;
+      display: block;
+      margin: 20px auto;
+      .tip{
+        margin: 15px;
+        font-size: 24px;
+        color: #333;
+      }
     }
 }
+
 
 </style>
 
