@@ -9,10 +9,6 @@
         </div>
         <div v-for="item in classMap" :key="item.icon" v-drag="greet"  :class="{'can-drag':item.draggable}">
           <i class="icon" :class="item.icon"></i>
-          <!-- <div class="icon-tip" v-if="item.draggable">
-            <span>终端:{{dragVal.type}}</span>
-            <span>x:{{dragVal.x}},y:{{dragVal.y}}</span>
-          </div> -->
         </div>
       </div>
 </template>

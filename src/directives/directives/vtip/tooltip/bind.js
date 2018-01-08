@@ -8,6 +8,7 @@ export default (el, binding) => {
   const { click, dark, transition } = binding.modifiers;
   const limitPlacementQueue = config.allPlacements.filter(plcaement => binding.modifiers[plcaement]);
   el._tipOptions = binding.value; // 指令的绑定值
+  
   el._tipHandler = function tipHandler() {
     if (!this._tipOptions) {
       return;

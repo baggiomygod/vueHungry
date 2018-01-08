@@ -1,8 +1,10 @@
 <div class="tooltip-wrap"
      v-show="visible"
      :style="tipStyle"
+     :class="tipClass"
+     style="display:block;"
      @mouseenter="showTip"
      @mouseleave="hiddenTip">
      <p class="tooltip-content">tooltip content...</p>
-    <span class="tooltip-arrow"></span>
+    <span class="tooltip-arrow" :class="arrowClass"></span>
     </div>

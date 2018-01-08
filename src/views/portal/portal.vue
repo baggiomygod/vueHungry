@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-header :seller="seller" :wx-code="code" :wx-state="state" :access-token="accessToken" :openid="openId" :user-info="userInfo"></v-header>
+        <v-header v-if="false" :seller="seller" :wx-code="code" :wx-state="state" :access-token="accessToken" :openid="openId" :user-info="userInfo"></v-header>
         <!-- <v-menus></v-menus> -->
         <scroll-menus :config="menusConfig" @change-title="changeTitle" @show-all-menus="changeMenus"></scroll-menus>
         <keep-alive>

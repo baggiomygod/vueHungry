@@ -1,33 +1,108 @@
-.tooltip-wrap{
+.tooltip-wrap {
   // 浅色风格
-  $light-bgcolor: #fff;
-  $light-bdcolor: #d9d9d9;
-  $light-fontcolor: #d9d9d9;
-  // 深色风格
+  $light-bgcolor: rgb(245, 208, 208);
+  $light-bdcolor: rgb(235, 173, 173);
+  $light-fontcolor: #333; // 深色风格
   $dark-bdcolor: #1f2d3d;
   $dark-bgcolor: #1f2d3d;
   $dark-fontcolor: #fff;
-
-  position: absolute;
+  position: fixed;
+  top: 5px;
+  left: 5px;
   width: 200px;
   height: auto;
   padding: 5px;
-  background-color: $dark-bgcolor;
-  color:$dark-fontcolor;
-  text-align: center;
+  text-align: left;
   border-radius: 4px;
-  // .tooltip-content{}
-  .tooltip-arrow{
+  background-color: $light-bgcolor;
+  color: $light-fontcolor;
+  /* tip内容 */
+  .tooltip-content {}
+
+  /* 箭头样式 */
+  .tooltip-arrow {
     position: absolute;
     height: 0;
     width: 0;
     padding: 0;
     margin: 0;
-    border-color: transparent;
-    border-style: inherit;
-    border-width: 10px;
-    &::after{
+    border-style: solid;
+    border-width: 7px;
+    z-index: -1;
+    border-color: transparent; // 顶部箭头-class以-top结尾
+  }
 
+  &[class^="bottom-"],
+  &[class*="bottom-"] {
+    // tip在底部
+    .tooltip-arrow {
+      border-bottom-color: $light-bgcolor;
+      top: 0;
+      transform: translateY(-90%);
+    }
+  }
+  &[class^="top-"],
+  &[class*="top-"] {
+    // tip在顶部
+    .tooltip-arrow {
+      border-top-color: $light-bgcolor;
+      bottom: 0;
+      transform: translateY(90%);
+    }
+  }
+  &[class^="left-"],
+  &[class*="left-"] {
+    // tip在右侧
+    .tooltip-arrow {
+      border-left-color: $light-bgcolor;
+      right: 0;
+      top: 0;
+      transform: translate(90%, 50%);
+    }
+  }
+  &[class^="right-"],
+  &[class*="right-"] {
+    // tip在左侧
+    .tooltip-arrow {
+      border-right-color: $light-bgcolor;
+      left: 0;
+      top: 0;
+      transform: translate(-90%, 50%);
+    }
+  }
+
+  // 深色主体
+  &.dark {
+    background-color: $dark-bgcolor;
+    color: $dark-fontcolor;
+    .tooltip-arrow {
+      // border-bottom-color:#000;
+      &[class^="bottom-"],
+      &[class*="bottom-"] {
+        border-bottom-color: $dark-bdcolor;
+        top: 0;
+        transform: translateY(-90%);
+      }
+      &[class^="top-"],
+      &[class*="top-"] {
+        border-top-color: $dark-bdcolor;
+        bottom: 0;
+        transform: translateY(90%);
+      }
+      &[class^="left-"],
+      &[class*="left-"] {
+        border-left-color: $dark-bdcolor;
+        right: 0;
+        top: 0;
+        transform: translate(90%, 50%);
+      }
+      &[class^="right-"],
+      &[class*="right-"] {
+        border-right-color: $dark-bdcolor;
+        left: 0;
+        top: 0;
+        transform: translate(-90%, 50%);
+      }
     }
   }
 }

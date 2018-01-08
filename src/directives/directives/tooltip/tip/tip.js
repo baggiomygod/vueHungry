@@ -6,8 +6,20 @@ const VtipConstructor = Vue.extend(main);
 const defaultOptions = {};
 // tip实例
 let vtipInstance = null;
+
+/**
+ *
+ * @param {*} options
+ * {
+ *  content: ''   指令绑定的值
+ *  placements: ['top', 'bottom']  展示位置
+ *  target: div   目标元素
+ *  theme: 'dark' 主题
+ * }
+ */
 export default function tip(options) {
   options = options || {};
+  // console.log('options:', options);
   // 判断是否已创建tooltip---实例已存在 && 挂载的元素有父节点
   if (vtipInstance && vtipInstance.$el.parentNode) {
     Object.assign(vtipInstance, defaultOptions, options);
