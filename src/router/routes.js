@@ -1,10 +1,7 @@
 import goods from 'views/products/goods/goods';
 import ratings from 'views/ratings/ratings';
 import seller from 'views/sellers/seller/seller';
-import test from 'views/test/test2';
-import icon from 'views/test/icon_font/icon_font';
-import zoom from 'views/test/zoom/zoom';
-import tip from 'views/test/tip/tip';
+import wxTest from 'views/test/wx-test';
 
 let routes = [{
     path: '/goods',
@@ -22,24 +19,9 @@ let routes = [{
     component: seller
   },
   { // 测试组件
-    path: '/test',
-    name: 'test',
-    component: test
-  },
-  {
-    path: '/icon',
-    name: '图标',
-    component: icon
-  },
-  {
-    path: '/zoom',
-    name: '缩放',
-    component: zoom
-  },
-  {
-    path: '/tip',
-    name: 'tip',
-    component: tip
+    path: '/wx-test',
+    name: 'wx-test',
+    component: wxTest
   }
 ];
 export default routes;

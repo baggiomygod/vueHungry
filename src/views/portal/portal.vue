@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-header v-if="false" :seller="seller" :wx-code="code" :wx-state="state" :access-token="accessToken" :openid="openId" :user-info="userInfo"></v-header>
+        <v-header :seller="seller" :wx-code="code" :wx-state="state" :access-token="accessToken" :openid="openId" :user-info="userInfo"></v-header>
         <!-- <v-menus></v-menus> -->
         <scroll-menus :config="menusConfig" @change-title="changeTitle" @show-all-menus="changeMenus"></scroll-menus>
         <keep-alive>
@@ -10,7 +10,6 @@
 </template>
 <script>
 import header from './header/header.vue';
-import goods from 'views/products/goods/goods.vue';
 import wxUtil from '../../utils/wxUtil';
 import ScrollMenus from 'views/components/scroll-menus/scroll-menus';
 // import AllMenus from 'views/components/all-menus/all-menus';
@@ -36,10 +35,7 @@ export default {
         { menu_name: '商品', url: '/goods' },
         { menu_name: '评论', url: '/ratings' },
         { menu_name: '商家', url: '/seller' },
-        { menu_name: '图标', url: '/icon' },
-        { menu_name: '缩放', url: '/zoom' },
-        { menu_name: 'tip', url: '/tip' },
-        { menu_name: 'test', url: '/test' }
+        { menu_name: 'wx', url: '/wx-test' }
       ],
       showAllMenus: false,
       propsHeader: 'Vue',
@@ -55,7 +51,6 @@ export default {
   },
   components: {
     'v-header': header,
-    'v-goods': goods,
     ScrollMenus
     // AllMenus
   },

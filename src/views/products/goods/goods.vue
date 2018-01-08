@@ -159,7 +159,7 @@ export default {
             this.$refs.food.show(); // 调用子组件方法，<child ref="childname" ></child>
         }
     },
-    // 注册组件
+    // 注册组件w
     components: {
         shopcar,
         cartcontrol,

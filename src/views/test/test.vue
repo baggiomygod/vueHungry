@@ -1,24 +1,31 @@
 <template>
-    <button @click="badd" class="btn">
-        test......</button>
+    <div class="fui-test">
+      <ul class="exam-list">
+        <li>视图内容</li>
+        <li>基础内容</li>
+        <li>表单组件</li>
+        <li>导航</li>
+        <li>媒体组件</li>
+        <li>地图</li>
+        <li>画布</li>
+      </ul>
+    </div>
 </template>
 <script>
+import ScrollMenus from 'views/components/scroll-menus/scroll-menus';
+
 export default {
-    methods: {
-        badd() {
-            console.log('test add ...');
-            this.$emit('badd', '123');
-        }
-    }
+  components: {
+    ScrollMenus
+  },
+  methods: {
+
+  }
 };
 </script>
 <style>
-.btn {
-    position: fixed;
-    width: 50px;
-    height: 20px;
-    top: 150px;
-    left: 50%;
+.fui-test{
+
 }
 </style>
 
