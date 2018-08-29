@@ -6,6 +6,7 @@ import App from './App';
 import directives from './directives';
 
 import 'common/style/index.scss';
+import '../static/css/reset.scss';
 import './main.scss';
 import 'static/icon_font/iconfont.css';// 引入图标库
 
