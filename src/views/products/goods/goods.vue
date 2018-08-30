@@ -59,119 +59,128 @@ import food from 'views/products/food/food';
 const goodsData = require('./goods.json');
 // const ERR_OK = 0;
 export default {
-    props: {
-        seller: {
-            type: Object
-        }
-    },
-    data() {
-        return {
-            goods: [],
-            listHeight: [],
-            scrollY: 0,
-            selectFood: {}
-        };
-    },
-    computed: {
-        currentLeftIndex() {
-            for (let i = 0; i < this.listHeight.length; i++) {
-                let height1 = this.listHeight[i];
-                let height2 = this.listHeight[i + 1];
-                if (!height2 || (this.scrollY >= height1 && this.scrollY < height2)) {
-                    return i;
-                }
-            }
-            return 0; // 如果this.listHeight.length 没有 返回0
-        },
-        selectFoods() {
-            let foods = [];
-            this.goods.forEach((good) => {
-                good.foods.forEach((food) => {
-                    if (food.count) {
-                        foods.push(food);
-                    }
-                });
-            });
-            return foods;
-        }
-    },
-    created() {
-        this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
-        this.goods = goodsData;
-          // this.$http.get('/api/goods').then((response) => {
-          //             response = response.body; // 这里response为什么不声明？
-          //             if (response.errno === ERR_OK) {
-          //                 this.goods = response.data;
-          //                 // 当要操作DOM或计算和DOM 相关的东西时时，要保证DOM已经渲染
-          //                 this.$nextTick(() => {
-          //                     this._initScroll();
-          //                     this._calculateHeight();
-          //                 });
-          //             }
-          //         })
-    },
-    methods: {
-        _initScroll() {
-            this.menuScroll = new BScroll(this.$refs.menuWrapper, {
-                click: true // betterScroll默认阻止了more时间，需要设置打开
-            }); // 获取到$refs DOM
-            this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
-                click: true,
-                probeType: 3
-            });
-            // 监听scroll事件,滚动时，实时拿到scrollY
-            this.foodsScroll.on('scroll', (pos) => {
-                this.scrollY = Math.abs(Math.round(pos.y));
-            });
-        },
-        _calculateHeight() {
-            let foodsList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
-            let height = 0;
-            this.listHeight.push(height);
-            for (let i = 0; i < foodsList.length; i++) {
-                let item = foodsList[i];
-                height += item.clientHeight;
-                this.listHeight.push(height);
-            }
-        },
-        selectMenu(index, e) {
-            // betterScroll派生的点击时间有_constructed属性（浏览器默认没有该时间，用于区分手机端和PC浏览器点击事件）
-            // true为手机端，再PC端没有这个属性：!e._constructed !flase=true   return
-            if (!e._constructed) {
-                return;
-            }
-            let foodsList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook'); // 拿到列表数组 List
-            let targetList = foodsList[index]; // 要滚动到的哪个元素
-            this.foodsScroll.scrollToElement(targetList, 300); // 调用betterScroll的接口scrollToElement（目标元素，动画时间）
-        },
-        addFood(target) {
-            this._drop(target);
-        },
-        _drop(target) {
-            // 优化体验，异步执行动画
-            this.$nextTick(() => {
-                this.$refs.shopcart.drop(target); // 调用子组件drop方法，子组件标签上ref="shopcart"
-            });
-        },
-        openFoodPage(food, e) {
-            if (!e._constructed) {
-                return;
-            }
-            this.selectFood = food;
-            this.$refs.food.show(); // 调用子组件方法，<child ref="childname" ></child>
-        }
-    },
-    // 注册组件w
-    components: {
-        shopcar,
-        cartcontrol,
-        food
-    },
-    events: { // 接收到子组件传递过来的cart.add事件，调用_drop函数--->_drop调用shopcar子组件的drop函数
-        'cart.add'(target) {
-            this._drop(target);
-        }
+  props: {
+    seller: {
+      type: Object
     }
+  },
+  data() {
+    return {
+      goods: [],
+      listHeight: [],
+      scrollY: 0,
+      selectFood: {}
+    };
+  },
+  computed: {
+    currentLeftIndex() {
+      for (let i = 0; i < this.listHeight.length; i++) {
+        let height1 = this.listHeight[i];
+        let height2 = this.listHeight[i + 1];
+        if (!height2 || (this.scrollY >= height1 && this.scrollY < height2)) {
+          return i;
+        }
+      }
+      return 0; // 如果this.listHeight.length 没有 返回0
+    },
+    selectFoods() {
+      let foods = [];
+      this.goods.forEach(good => {
+        good.foods.forEach(food => {
+          if (food.count) {
+            foods.push(food);
+          }
+        });
+      });
+      return foods;
+    }
+  },
+  created() {
+    this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
+    this.goods = goodsData;
+    this.$nextTick(() => {
+      this._initScroll();
+      this._calculateHeight();
+    });
+    // this.$http.get('/api/goods').then((response) => {
+    //             response = response.body; // 这里response为什么不声明？
+    //             if (response.errno === ERR_OK) {
+    //                 this.goods = response.data;
+    //                 // 当要操作DOM或计算和DOM 相关的东西时时，要保证DOM已经渲染
+    //                 this.$nextTick(() => {
+    //                     this._initScroll();
+    //                     this._calculateHeight();
+    //                 });
+    //             }
+    //         })
+  },
+  methods: {
+    _initScroll() {
+      this.menuScroll = new BScroll(this.$refs.menuWrapper, {
+        click: true // betterScroll默认阻止了more时间，需要设置打开
+      }); // 获取到$refs DOM
+      this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
+        click: true,
+        probeType: 3
+      });
+      // 监听scroll事件,滚动时，实时拿到scrollY
+      this.foodsScroll.on('scroll', pos => {
+        this.scrollY = Math.abs(Math.round(pos.y));
+      });
+    },
+    _calculateHeight() {
+      let foodsList = this.$refs.foodsWrapper.getElementsByClassName(
+        'food-list-hook'
+      );
+      let height = 0;
+      this.listHeight.push(height);
+      for (let i = 0; i < foodsList.length; i++) {
+        let item = foodsList[i];
+        height += item.clientHeight;
+        this.listHeight.push(height);
+      }
+    },
+    selectMenu(index, e) {
+      // betterScroll派生的点击时间有_constructed属性（浏览器默认没有该时间，用于区分手机端和PC浏览器点击事件）
+      // true为手机端，再PC端没有这个属性：!e._constructed !flase=true   return
+      if (!e._constructed) {
+        return;
+      }
+      let foodsList = this.$refs.foodsWrapper.getElementsByClassName(
+        'food-list-hook'
+      ); // 拿到列表数组 List
+      let targetList = foodsList[index]; // 要滚动到的哪个元素
+      this.foodsScroll.scrollToElement(targetList, 300); // 调用betterScroll的接口scrollToElement（目标元素，动画时间）
+    },
+    addFood(target) {
+      this._drop(target);
+    },
+    _drop(target) {
+      // 优化体验，异步执行动画
+      this.$nextTick(() => {
+        this.$refs.shopcart.drop(target); // 调用子组件drop方法，子组件标签上ref='shopcart'
+      });
+    },
+    openFoodPage(food, e) {
+      if (!e._constructed) {
+        return;
+      }
+      this.selectFood = food;
+      this.$refs.food.show(); // 调用子组件方法，<child ref='childname' ></child>
+    }
+  },
+  // 注册组件w
+  components: {
+    shopcar,
+    cartcontrol,
+    food
+  },
+  events: {
+    // 接收到子组件传递过来的cart.add事件，调用_drop函数--->_drop调用shopcar子组件的drop函数
+    'cart.add'(target) {
+      this._drop(target);
+    }
+  }
 };
 </script>
 <style lang="scss" rel="stylesheet/scss">
