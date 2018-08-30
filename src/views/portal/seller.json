@@ -1,0 +1,55 @@
+{
+  "name": "一机男（one）",
+  "description": "flyme mui ios",
+  "deliveryTime": 24,
+  "freePostage":888,
+  "telephoneCharge":100,
+  "score": 4.2,
+  "serviceScore": 4.1,
+  "foodScore": 4.3,
+  "rankRate": 69.2,
+  "minPrice": 20,
+  "deliveryPrice": 10,
+  "ratingCount": 24,
+  "sellCount": 90,
+  "bulletin": "魅族，小米，一加，黑莓，MOTO，ZUK,OPPO,VIVO,华为...",
+  "supports": [
+    {
+      "type": 0,
+      "description": "科技改变生活!"
+    },
+    {
+      "type": 1,
+      "description": "买手机送耳机+9折"
+    },
+    {
+      "type": 2,
+      "description": "买魅族送小米"
+    },
+    {
+      "type": 3,
+      "description": "送贴膜、保护壳"
+    },
+    {
+      "type": 4,
+      "description": "15天退换"
+    }
+  ],
+  "avatar1": "static/img/icon/one.png",
+  "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/meizuavatar.png",
+  "pics": [
+    "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+    "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+    "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+    "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+    "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+    "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+    "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png"
+  ],
+  "infos": [
+    "该商家支持发票,请下单写好发票抬头",
+    "品类:电子产品",
+    "浙江省杭州市XXX大厦XX座101单元1111",
+    "营业时间:10:00-20:30"
+  ]
+}

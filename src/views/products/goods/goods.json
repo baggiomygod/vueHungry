@@ -1,0 +1,2667 @@
+ [
+    {
+      "name": "魅族",
+      "type": -1,
+      "foods": [
+        {
+          "name": "魅蓝note5",
+          "price": 999,
+          "oldPrice": 999,
+          "description": "魅蓝",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note3",
+          "price": 799,
+          "oldPrice": "999",
+          "description": "青年良品",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note1",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note2",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "还行",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝5",
+          "price": 599,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不好，手感太差",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX5",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 91,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "支持魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "很好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "好手机",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX6",
+          "price": 1999,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 86,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝Max",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "3+64G",
+          "sellCount": 84,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "够大",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6",
+          "price": 2499,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "音质好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "好看",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6s",
+          "price": 2799,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "拍照好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    },
+    {
+      "name": "小米",
+      "type": 2,
+      "foods": [
+        {
+          "name": "小米1",
+          "price": 1999,
+          "oldPrice": 1999,
+          "description": "魅蓝",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "小米2",
+          "price": 1999,
+          "oldPrice": "999",
+          "description": "青年良品",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "小米5",
+          "price": 1999,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "小米MIX",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "还行",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "小米max",
+          "price": 599,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不好，手感太差",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "小米6",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 91,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "支持魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "很好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "好手机",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "小米note",
+          "price": 1999,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 86,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "红米",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "3+64G",
+          "sellCount": 84,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "够大",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "红米note",
+          "price": 2499,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "音质好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "好看",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "小米笔记本",
+          "price": 2799,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "拍照好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    },
+    {
+      "name": "一加",
+      "type": 1,
+     "foods": [
+        {
+          "name": "一加3t",
+          "price": 1999,
+          "oldPrice": 999,
+          "description": "魅蓝",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "一加2",
+          "price": 799,
+          "oldPrice": "999",
+          "description": "青年良品",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "一加1",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "一加X",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "还行",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    },
+    {
+      "name": "ZUK",
+      "type": -1,
+      "foods": [
+        {
+          "name": "zuk2",
+          "price": 999,
+          "oldPrice": 999,
+          "description": "zuk",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "zuk pro",
+          "price": 799,
+          "oldPrice": "999",
+          "description": "zuk",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "zuk edge",
+          "price": 2299,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    },
+    {
+      "name": "华为",
+      "type": -1,
+      "foods": [
+        {
+          "name": "魅蓝note5",
+          "price": 999,
+          "oldPrice": 999,
+          "description": "魅蓝",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note3",
+          "price": 799,
+          "oldPrice": "999",
+          "description": "青年良品",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note1",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note2",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "还行",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝5",
+          "price": 599,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不好，手感太差",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX5",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 91,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "支持魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "很好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "好手机",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX6",
+          "price": 1999,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 86,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝Max",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "3+64G",
+          "sellCount": 84,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "够大",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6",
+          "price": 2499,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "音质好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "好看",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6s",
+          "price": 2799,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "拍照好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    },
+    {
+      "name": "MOTO",
+      "type": -1,
+      "foods": [
+        {
+          "name": "魅蓝note5",
+          "price": 999,
+          "oldPrice": 999,
+          "description": "魅蓝",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note3",
+          "price": 799,
+          "oldPrice": "999",
+          "description": "青年良品",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note1",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note2",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "还行",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝5",
+          "price": 599,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不好，手感太差",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX5",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 91,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "支持魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "很好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "好手机",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX6",
+          "price": 1999,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 86,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝Max",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "3+64G",
+          "sellCount": 84,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "够大",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6",
+          "price": 2499,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "音质好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "好看",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6s",
+          "price": 2799,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "拍照好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    },
+    {
+      "name": "黑莓",
+      "type": -1,
+      "foods": [
+        {
+          "name": "魅蓝note5",
+          "price": 999,
+          "oldPrice": 999,
+          "description": "魅蓝",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note3",
+          "price": 799,
+          "oldPrice": "999",
+          "description": "青年良品",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note1",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note2",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "还行",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝5",
+          "price": 599,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不好，手感太差",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX5",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 91,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "支持魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "很好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "好手机",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX6",
+          "price": 1999,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 86,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝Max",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "3+64G",
+          "sellCount": 84,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "够大",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6",
+          "price": 2499,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "音质好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "好看",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6s",
+          "price": 2799,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "拍照好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    },
+    {
+      "name": "OPPO",
+      "type": -1,
+      "foods": [
+        {
+          "name": "魅蓝note5",
+          "price": 999,
+          "oldPrice": 999,
+          "description": "魅蓝",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note3",
+          "price": 799,
+          "oldPrice": "999",
+          "description": "青年良品",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note1",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note2",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "还行",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝5",
+          "price": 599,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不好，手感太差",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX5",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 91,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "支持魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "很好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "好手机",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX6",
+          "price": 1999,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 86,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝Max",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "3+64G",
+          "sellCount": 84,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "够大",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6",
+          "price": 2499,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "音质好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "好看",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6s",
+          "price": 2799,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "拍照好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    },
+    {
+      "name": "VIVO",
+      "type": -1,
+      "foods": [
+        {
+          "name": "魅蓝note5",
+          "price": 999,
+          "oldPrice": 999,
+          "description": "魅蓝",
+          "sellCount": 1229,
+          "rating": 100,
+          "info": "魅蓝note5，4000毫安真快充，金属指纹识别，大运存。",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "好看，实惠，快充给力，flyme超喜欢",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "不错，看好魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "不太好，我用小米",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note3",
+          "price": 799,
+          "oldPrice": "999",
+          "description": "青年良品",
+          "sellCount": 1888,
+          "rating": 96,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 1,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "info": "",
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note1",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 124,
+          "rating": 85,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "便宜",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 1,
+              "text": "很一般啊",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝note2",
+          "price": 699,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 114,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "还行",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝5",
+          "price": 599,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 101,
+          "rating": 78,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 1,
+              "text": "不好，手感太差",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX5",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 91,
+          "rating": 100,
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "支持魅族",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "很好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "好手机",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "MX6",
+          "price": 1999,
+          "oldPrice": "",
+          "description": "魅族mx系列",
+          "sellCount": 86,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅蓝Max",
+          "price": 1699,
+          "oldPrice": "",
+          "description": "3+64G",
+          "sellCount": 84,
+          "rating": 100,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "够大",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6",
+          "price": 2499,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 81,
+          "rating": 91,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "音质好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "好看",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        },
+        {
+          "name": "魅族pro6s",
+          "price": 2799,
+          "oldPrice": "",
+          "description": "",
+          "sellCount": 80,
+          "rating": 93,
+          "info": "",
+          "ratings": [
+            {
+              "username": "3******c",
+              "rateTime": 1469281964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "2******3",
+              "rateTime": 1469271264000,
+              "rateType": 0,
+              "text": "拍照好",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            },
+            {
+              "username": "3******b",
+              "rateTime": 1469261964000,
+              "rateType": 0,
+              "text": "",
+              "avatar": "http://vueapp.oss-cn-shanghai.aliyuncs.com/seller/default_header.png"
+            }
+          ],
+          "icon": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5.png",
+          "image": "http://vueapp.oss-cn-shanghai.aliyuncs.com/meizu/note5750.png"
+        }
+      ]
+    }
+  ]

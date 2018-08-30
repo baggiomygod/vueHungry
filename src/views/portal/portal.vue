@@ -12,9 +12,12 @@
 import header from './header/header.vue';
 import wxUtil from '../../utils/wxUtil';
 import ScrollMenus from 'views/components/scroll-menus/scroll-menus';
+
 // import AllMenus from 'views/components/all-menus/all-menus';
 // const OAUTH2API = 'https://api.weixin.qq.com/sns/oauth2/access_token?'; // appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code;
-const ERR_OK = 0;
+
+const sellerData = require('./seller.json');
+// const ERR_OK = 0;
 
 export default {
   mixins: [wxUtil],
@@ -34,8 +37,8 @@ export default {
       menusConfig: [
         { menu_name: '商品', url: '/goods' },
         { menu_name: '评论', url: '/ratings' },
-        { menu_name: '商家', url: '/seller' },
-        { menu_name: 'wx', url: '/wx-test' }
+        { menu_name: '商家', url: '/seller' }
+        // { menu_name: 'wx', url: '/wx-test' }
       ],
       showAllMenus: false,
       propsHeader: 'Vue',
@@ -57,12 +60,13 @@ export default {
   methods: {
     // 获取seller数据
     getSellerData() {
-      this.$http.get('/api/seller').then(response => {
-        response = response.body;
-        if (response.errno === ERR_OK) {
-          this.seller = response.data;
-        }
-      });
+      this.seller = sellerData;
+      // this.$http.get('/api/seller').then(response => {
+      //   response = response.body;
+      //   if (response.errno === ERR_OK) {
+      //     this.seller = response.data;
+      //   }
+      // })
     },
     changeTitle(event) {
       this.propsHeader = event;
@@ -108,10 +112,10 @@ export default {
     this.state = this.$route.query.state;
     // 获取seller数据
     this.getSellerData();
-    // code换取access_token
-    this.getAccessTokenByCode().then(res => {
-      this.getUserInfo(); // 获取用户信息
-    });
+    // code换取access_token gitpage不支持请求 注释
+    // this.getAccessTokenByCode().then(res => {
+    //   this.getUserInfo(); // 获取用户信息
+    // });
   }
 };
 </script>

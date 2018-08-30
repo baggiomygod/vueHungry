@@ -56,7 +56,8 @@ import BScroll from 'better-scroll';
 import shopcar from 'views/components/shopcar/shopcar'; // 引入组件
 import cartcontrol from 'views/components/cartcontrol/cartcontrol';
 import food from 'views/products/food/food';
-const ERR_OK = 0;
+const goodsData = require('./goods.json');
+// const ERR_OK = 0;
 export default {
     props: {
         seller: {
@@ -96,17 +97,18 @@ export default {
     },
     created() {
         this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
-        this.$http.get('/api/goods').then((response) => {
-            response = response.body; // 这里response为什么不声明？
-            if (response.errno === ERR_OK) {
-                this.goods = response.data;
-                // 当要操作DOM或计算和DOM 相关的东西时时，要保证DOM已经渲染
-                this.$nextTick(() => {
-                    this._initScroll();
-                    this._calculateHeight();
-                });
-            }
-        });
+        this.goods = goodsData;
+          // this.$http.get('/api/goods').then((response) => {
+          //             response = response.body; // 这里response为什么不声明？
+          //             if (response.errno === ERR_OK) {
+          //                 this.goods = response.data;
+          //                 // 当要操作DOM或计算和DOM 相关的东西时时，要保证DOM已经渲染
+          //                 this.$nextTick(() => {
+          //                     this._initScroll();
+          //                     this._calculateHeight();
+          //                 });
+          //             }
+          //         })
     },
     methods: {
         _initScroll() {
@@ -175,146 +177,146 @@ export default {
 <style lang="scss" rel="stylesheet/scss">
 @import "../../../common/style/mixin";
 .goods {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    top: 180px;
-    bottom: 46px;
-    overflow: hidden;
-    .menu-wrapper {
-        flex: 0 0 80px;
-        width: 80px;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 180px;
+  bottom: 46px;
+  overflow: hidden;
+  .menu-wrapper {
+    flex: 0 0 80px;
+    width: 80px;
+    background-color: #f3f5f7;
+    .menu-ul {
+      .menu-item {
+        box-sizing: border-box;
+        display: table;
+        height: 54px;
+        width: 56px;
+        line-height: 14px;
+        padding: 0 12px;
+        width: 100%;
+        &.current {
+          position: relative;
+          z-index: 10;
+          margin: -1px;
+          background-color: #fff;
+          font-weight: 700;
+          .text {
+            border: none;
+          }
+        }
+        .text {
+          font-size: 12px;
+          display: table-cell;
+          vertical-align: middle;
+          width: 56px;
+          text-align: center;
+          @include border-1px(rgba(7, 17, 27, 0.1));
+          .icon {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            margin-right: 2px;
+            background-size: 12px 12px;
+            background-repeat: no-repeat;
+          }
+          .decrease {
+            @include bg-image("decrease_3");
+          }
+          .discount {
+            @include bg-image("discount_3");
+          }
+          .guarantee {
+            @include bg-image("guarantee_3");
+          }
+          .invoice {
+            @include bg-image("invoice_3");
+          }
+          .special {
+            @include bg-image("special_3");
+          }
+        }
+      }
+    }
+  }
+  .foods-wrapper {
+    flex: 1; // flex-grow:1 填充剩余空间
+    .food-list {
+      .title {
+        padding-left: 14px;
+        height: 26px;
+        line-height: 26px;
+        border-left: 2px solid #d9dde1;
         background-color: #f3f5f7;
-        .menu-ul {
-            .menu-item {
-                box-sizing: border-box;
-                display: table;
-                height: 54px;
-                width: 56px;
-                line-height: 14px;
-                padding: 0 12px;
-                width: 100%;
-                &.current {
-                    position: relative;
-                    z-index: 10;
-                    margin: -1px;
-                    background-color: #fff;
-                    font-weight: 700;
-                    .text {
-                        border: none;
-                    }
-                }
-                .text {
-                    font-size: 12px;
-                    display: table-cell;
-                    vertical-align: middle;
-                    width: 56px;
-                    text-align: center;
-                    @include border-1px(rgba(7, 17, 27, 0.1));
-                    .icon {
-                        display: inline-block;
-                        height: 12px;
-                        width: 12px;
-                        margin-right: 2px;
-                        background-size: 12px 12px;
-                        background-repeat: no-repeat;
-                    }
-                    .decrease {
-                        @include bg-image("decrease_3");
-                    }
-                    .discount {
-                        @include bg-image("discount_3");
-                    }
-                    .guarantee {
-                        @include bg-image("guarantee_3");
-                    }
-                    .invoice {
-                        @include bg-image("invoice_3");
-                    }
-                    .special {
-                        @include bg-image("special_3");
-                    }
-                }
-            }
+        font-size: 12px;
+        color: rgb(147, 153, 159);
+      }
+      .food-item {
+        display: flex;
+        margin: 16px;
+        padding-bottom: 16px;
+        @include border-1px(rgba(7, 17, 27, 0.1));
+        :last-child {
+          @include border-none();
+          margin-bottom: 0;
         }
-    }
-    .foods-wrapper {
-        flex: 1; // flex-grow:1 填充剩余空间
-        .food-list {
-            .title {
-                padding-left: 14px;
-                height: 26px;
-                line-height: 26px;
-                border-left: 2px solid #d9dde1;
-                background-color: #f3f5f7;
-                font-size: 12px;
-                color: rgb(147, 153, 159);
-            }
-            .food-item {
-                display: flex;
-                margin: 16px;
-                padding-bottom: 16px;
-                @include border-1px(rgba(7, 17, 27, 0.1));
-                 :last-child {
-                    @include border-none();
-                    margin-bottom: 0;
-                }
-                .icon {
-                    flex: 0 0 57px; //flex-grow放大比例，flex-shrink缩小比例 默认宽度（flex-base分配多余空间之前，项目占据的主轴空间）
-                    margin-right: 10px;
-                }
-                .content {
-                    flex: 1; //前者flex-grow:0 这里1，占用剩余空间
-                    .name {
-                        margin-top: 2px;
-                        font-size: 14px;
-                        color: rgb(7, 17, 27);
-                        line-height: 14px;
-                    }
-                    .desc {
-                        margin-top: 8px;
-                        color: rgb(147, 153, 159);
-                        font-size: 10px;
-                        line-height: 10px;
-                    }
-                    .extra {
-                        color: rgb(147, 153, 159);
-                        font-size: 10px;
-                        line-height: 10px;
-                        margin-top: 8px;
-                         :first-child {
-                            margin-right: 12px;
-                        }
-                    }
-                    .price {
-                        .now {
-                            font-size: 10px;
-                            line-height: 24px;
-                            color: rgb(240, 20, 20);
-                            margin-right: 8px;
-                            .now-price {
-                                font-weight: 700;
-                                font-size: 14px;
-                            }
-                        }
-                        .old {
-                            font-size: 10px;
-                            color: rgb(147, 153, 159);
-                            line-height: 24px;
-                            text-decoration: line-through;
-                            .old-price {
-                                font-weight: 700;
-                            }
-                        }
-                    }
-                    .cartcontrol-wrapper {
-                        position: absolute;
-                        right: 0;
-                        bottom: 12px;
-                    }
-                }
-            }
+        .icon {
+          flex: 0 0 57px; //flex-grow放大比例，flex-shrink缩小比例 默认宽度（flex-base分配多余空间之前，项目占据的主轴空间）
+          margin-right: 10px;
         }
+        .content {
+          flex: 1; //前者flex-grow:0 这里1，占用剩余空间
+          .name {
+            margin-top: 2px;
+            font-size: 14px;
+            color: rgb(7, 17, 27);
+            line-height: 14px;
+          }
+          .desc {
+            margin-top: 8px;
+            color: rgb(147, 153, 159);
+            font-size: 10px;
+            line-height: 10px;
+          }
+          .extra {
+            color: rgb(147, 153, 159);
+            font-size: 10px;
+            line-height: 10px;
+            margin-top: 8px;
+            :first-child {
+              margin-right: 12px;
+            }
+          }
+          .price {
+            .now {
+              font-size: 10px;
+              line-height: 24px;
+              color: rgb(240, 20, 20);
+              margin-right: 8px;
+              .now-price {
+                font-weight: 700;
+                font-size: 14px;
+              }
+            }
+            .old {
+              font-size: 10px;
+              color: rgb(147, 153, 159);
+              line-height: 24px;
+              text-decoration: line-through;
+              .old-price {
+                font-weight: 700;
+              }
+            }
+          }
+          .cartcontrol-wrapper {
+            position: absolute;
+            right: 0;
+            bottom: 12px;
+          }
+        }
+      }
     }
+  }
 }
 </style>

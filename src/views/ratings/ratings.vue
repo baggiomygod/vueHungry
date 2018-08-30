@@ -58,8 +58,9 @@ import BScroll from 'better-scroll';
 import {
     formatDate
 } from 'common/js/date';
+const ratingData = require('./rating.json');
 const ALL = 2;
-const ERR_OK = 0;
+// const ERR_OK = 0;
 export default {
     props: {
         seller: {
@@ -79,17 +80,23 @@ export default {
         };
     },
     created() {
-        this.$http.get('/api/ratings').then((response) => {
-            response = response.body;
-            if (response.errno === ERR_OK) {
-                this.ratings = response.data;
+        this.ratings = ratingData;
                 this.$nextTick(() => {
                     this.scroll = new BScroll(this.$refs.ratings, {
                         click: true
                     });
                 });
-            }
-        });
+        // this.$http.get('/api/ratings').then((response) => {
+        //     response = response.body;
+        //     if (response.errno === ERR_OK) {
+        //         this.ratings = response.data;
+        //         this.$nextTick(() => {
+        //             this.scroll = new BScroll(this.$refs.ratings, {
+        //                 click: true
+        //             });
+        //         });
+        //     }
+        // });
     },
     components: {
         star,
